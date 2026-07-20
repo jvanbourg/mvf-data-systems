@@ -1,4 +1,4 @@
-# MVF Data Systems — Website
+# MVF Data Systems Website
 
 Static website for [mvfdatasystems.com](https://mvfdatasystems.com), rebuilt as plain HTML/CSS/JS so it can be edited in Cursor and hosted anywhere. This replaces the IONOS MyWebsite Now builder site (which stays live until you switch the domain over).
 
@@ -6,11 +6,11 @@ Static website for [mvfdatasystems.com](https://mvfdatasystems.com), rebuilt as 
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home page (hero, "What I Fix" list, stats, contact form) |
-| `expertise.html` | "Why MVF" — boutique positioning and bilingual service |
-| `services.html` | "What I Fix" — the seven service verticals in detail |
-| `case-studies.html` | "Track Record" — past projects and funding secured |
-| `about.html` | "About Marc" — bio and headshot |
+| `index.html` | Home page (hero, "What I Streamline" list, stats, contact form) |
+| `expertise.html` | "Why MVF": senior expertise and bilingual service |
+| `services.html` | "What I Streamline": the seven service areas in detail |
+| `case-studies.html` | "Track Record": past projects and funding secured |
+| `about.html` | "About Marc": bio and headshot |
 | `css/style.css` | All site styles (cream/ink/violet theme, Antonio + Inter type) |
 | `js/main.js` | Mobile nav toggle and active-link highlighting |
 | `img/` | Site images (Marc's headshot) |
@@ -36,14 +36,14 @@ The form on the home page posts to [Formspree](https://formspree.io). To make it
 
 Your domain (`mvfdatasystems.com`) stays with IONOS. Two options:
 
-### Option A — IONOS Deploy Now (recommended)
+### Option A: IONOS Deploy Now (recommended)
 
 1. Push this repo to GitHub.
 2. Sign in at [ionos.space](https://www.ionos.com/hosting/deploy-now) with your IONOS account and connect the GitHub repo as a "Static project".
 3. Every `git push` deploys automatically.
 4. In the Deploy Now project settings, assign `mvfdatasystems.com` as the custom domain.
 
-### Option B — Classic webspace via SFTP
+### Option B: Classic webspace via SFTP
 
 1. In the IONOS control panel, set up hosting webspace and find your SFTP credentials.
 2. Upload all files in this folder (keeping the `css/` and `js/` structure) to the webspace root.

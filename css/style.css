@@ -1,5 +1,5 @@
 /* ============================================
-   MVF Data Systems — site styles
+   MVF Data Systems site styles
    Theme: cream / ink / electric violet
    Type: Anton (condensed display) + Inter (body)
    ============================================ */
@@ -195,22 +195,25 @@ a {
 }
 
 .hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.22em;
   font-size: clamp(2.3rem, 6vw, 4.6rem);
-  max-width: 1000px;
+  line-height: 0.94;
+  max-width: 1100px;
 }
 
-.hero h1 .boxed {
-  display: inline-block;
-  font-size: 0.74em;
-  border: 3px solid var(--violet);
-  padding: 0.06em 0.22em 0.12em;
-  margin: 0.1em 0;
-  transform: skewX(-8deg);
+.hero h1 .hero-line {
+  display: block;
+}
+
+.hero h1 .hero-line-problem {
   white-space: nowrap;
 }
 
-@media (max-width: 700px) {
-  .hero h1 .boxed {
+@media (max-width: 760px) {
+  .hero h1 .hero-line-problem {
     white-space: normal;
   }
 }
@@ -242,22 +245,6 @@ a {
   align-items: center;
   gap: 22px;
   flex-wrap: wrap;
-}
-
-.hero .free-note {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.hero .free-note a {
-  color: var(--ink);
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.hero .free-note a:hover {
-  color: var(--violet);
 }
 
 /* ---------- Page header (interior) ---------- */
@@ -373,15 +360,15 @@ a {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  background: transparent;
 }
 
 .card {
   background: var(--cream);
-  padding: 36px 32px;
+  border: 1px solid var(--line);
+  padding: 42px 38px;
   transition: background 0.15s;
 }
 
@@ -391,7 +378,7 @@ a {
 
 .card .tag {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: var(--violet);
   text-transform: uppercase;
@@ -403,15 +390,16 @@ a {
   font-family: "Antonio", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.25rem;
-  line-height: 1.15;
-  margin-bottom: 12px;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
 
 .card p,
 .card li {
   color: var(--muted);
-  font-size: 0.96rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 
 .card ul {
@@ -500,25 +488,19 @@ a {
   border-color: var(--ink);
 }
 
-.cta-strip a.phone {
-  color: #fff;
-  font-family: "Antonio", sans-serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 0.03em;
-}
-
 /* ---------- About / bio ---------- */
 
 .bio-grid {
   display: grid;
   grid-template-columns: 380px 1fr;
   gap: 64px;
-  align-items: start;
+  align-items: center;
 }
 
 .headshot-frame {
   position: relative;
+  border: 6px solid var(--violet);
+  padding: 10px;
 }
 
 .headshot-frame img {
@@ -526,15 +508,6 @@ a {
   filter: grayscale(1) contrast(1.05);
   position: relative;
   z-index: 1;
-}
-
-.headshot-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 3px solid var(--violet);
-  transform: translate(16px, 16px);
-  z-index: 0;
 }
 
 .bio-body h2 {
@@ -604,20 +577,6 @@ a {
   max-width: 460px;
 }
 
-.contact-info .phone-big {
-  display: inline-block;
-  font-family: "Antonio", sans-serif;
-  font-weight: 700;
-  font-size: 1.7rem;
-  color: var(--ink);
-  margin-top: 26px;
-  letter-spacing: 0.03em;
-}
-
-.contact-info .phone-big:hover {
-  color: var(--violet);
-}
-
 form.contact {
   background: #fff;
   border: 1px solid var(--line);
@@ -652,18 +611,6 @@ form.contact textarea:focus {
   outline: 2px solid var(--violet);
   outline-offset: 0;
   border-color: transparent;
-}
-
-form.contact .required {
-  color: var(--violet);
-}
-
-form.contact .note {
-  font-size: 0.8rem;
-  color: var(--muted);
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
 }
 
 /* ---------- Footer ---------- */
@@ -716,14 +663,6 @@ form.contact .note {
   color: #fff;
 }
 
-.footer-phone {
-  color: var(--cream);
-  font-family: "Antonio", sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 0.03em;
-}
-
 .copyright {
   margin-top: 44px;
   padding-top: 24px;
@@ -757,6 +696,14 @@ form.contact .note {
 }
 
 @media (max-width: 760px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 32px 28px;
+  }
+
   .nav-toggle {
     display: block;
   }
