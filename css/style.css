@@ -53,8 +53,8 @@ a {
 /* ---------- Display type ---------- */
 
 .display {
-  font-family: "Anton", "Arial Narrow", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", "Arial Narrow", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 1.02;
   letter-spacing: 0.005em;
@@ -88,7 +88,8 @@ a {
 }
 
 .brand {
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1.25rem;
   color: var(--ink);
@@ -306,15 +307,16 @@ a {
 }
 
 .section-head .index {
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   font-size: 0.95rem;
   color: var(--violet);
   letter-spacing: 0.05em;
 }
 
 .section-head h2 {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(1.7rem, 3.4vw, 2.6rem);
   line-height: 1.05;
@@ -350,7 +352,8 @@ a {
 }
 
 .fix-list .num {
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   font-size: 1.1rem;
   color: var(--violet);
 }
@@ -397,8 +400,8 @@ a {
 }
 
 .card h3 {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1.25rem;
   line-height: 1.15;
@@ -426,8 +429,8 @@ a {
 }
 
 .band h2 {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(1.7rem, 3.4vw, 2.6rem);
   margin-bottom: 48px;
@@ -440,7 +443,8 @@ a {
 }
 
 .stats .num {
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   font-size: clamp(2.6rem, 5vw, 3.8rem);
   color: var(--violet);
   line-height: 1;
@@ -471,8 +475,8 @@ a {
 }
 
 .cta-strip h2 {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.05;
@@ -498,7 +502,8 @@ a {
 
 .cta-strip a.phone {
   color: #fff;
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   font-size: 1.6rem;
   letter-spacing: 0.03em;
 }
@@ -533,8 +538,8 @@ a {
 }
 
 .bio-body h2 {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(1.6rem, 3vw, 2.3rem);
   margin-bottom: 6px;
@@ -586,8 +591,8 @@ a {
 }
 
 .contact-info h2 {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(1.8rem, 3.6vw, 2.8rem);
   line-height: 1.05;
@@ -601,7 +606,8 @@ a {
 
 .contact-info .phone-big {
   display: inline-block;
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   font-size: 1.7rem;
   color: var(--ink);
   margin-top: 26px;
@@ -669,7 +675,8 @@ form.contact .note {
 }
 
 .site-footer .big-mark {
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(2rem, 6vw, 4rem);
   color: var(--cream);
@@ -711,7 +718,8 @@ form.contact .note {
 
 .footer-phone {
   color: var(--cream);
-  font-family: "Anton", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0.03em;
 }

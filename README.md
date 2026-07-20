@@ -11,7 +11,7 @@ Static website for [mvfdatasystems.com](https://mvfdatasystems.com), rebuilt as 
 | `services.html` | "What I Fix" — the seven service verticals in detail |
 | `case-studies.html` | "Track Record" — past projects and funding secured |
 | `about.html` | "About Marc" — bio and headshot |
-| `css/style.css` | All site styles (cream/ink/violet theme, Anton + Inter type) |
+| `css/style.css` | All site styles (cream/ink/violet theme, Antonio + Inter type) |
 | `js/main.js` | Mobile nav toggle and active-link highlighting |
 | `img/` | Site images (Marc's headshot) |
 
