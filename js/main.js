@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
     toggle.addEventListener("click", () => links.classList.toggle("open"));
+    // Close the mobile menu when a link is tapped (matters for same-page anchors)
+    links.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => links.classList.remove("open"));
+    });
   }
 
   // Highlight the current page in the nav
