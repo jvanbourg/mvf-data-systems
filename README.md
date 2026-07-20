@@ -6,13 +6,14 @@ Static website for [mvfdatasystems.com](https://mvfdatasystems.com), rebuilt as 
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home page (hero, overview, contact form) |
-| `expertise.html` | Areas of expertise and competitive advantage |
-| `services.html` | Data science and IT optimization services |
-| `case-studies.html` | Selected client projects |
-| `about.html` | Company background and founder bio |
-| `css/style.css` | All site styles (colors, layout, components) |
+| `index.html` | Home page (hero, "What I Fix" list, stats, contact form) |
+| `expertise.html` | "Why MVF" — boutique positioning and bilingual service |
+| `services.html` | "What I Fix" — the seven service verticals in detail |
+| `case-studies.html` | "Track Record" — past projects and funding secured |
+| `about.html` | "About Marc" — bio and headshot |
+| `css/style.css` | All site styles (cream/ink/violet theme, Anton + Inter type) |
 | `js/main.js` | Mobile nav toggle and active-link highlighting |
+| `img/` | Site images (Marc's headshot) |
 
 No build step, no dependencies. Edit the HTML/CSS directly and refresh.
 
