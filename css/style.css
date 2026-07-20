@@ -75,8 +75,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(244, 241, 234, 0.94);
-  backdrop-filter: blur(10px);
+  background: var(--cream);
   border-bottom: 1px solid var(--line);
 }
 
@@ -215,6 +214,13 @@ a {
 @media (max-width: 760px) {
   .hero h1 .hero-line-problem {
     white-space: normal;
+  }
+
+  /* When the second hero line wraps, flex gap would exceed the wrapped
+     line spacing; equalize by using line-height alone. */
+  .hero h1 {
+    gap: 0;
+    line-height: 1.08;
   }
 }
 
