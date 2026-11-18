@@ -11,3 +11,4 @@ ads/reports/
 *client_secret*.json
 *credentials*.json
 .env
+ads/account.local.yaml

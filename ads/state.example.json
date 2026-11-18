@@ -1,0 +1,9 @@
+{
+  "customer_id": "1234567890",
+  "updated_at": "2026-11-18T00:00:00",
+  "campaigns": {
+    "MVF | Business Consulting | Los Angeles": {"id": 0, "resource_name": "customers/1234567890/campaigns/0", "status": "PAUSED", "daily_budget_usd": 19.74}
+  },
+  "ad_groups": {},
+  "conversion_actions": {}
+}

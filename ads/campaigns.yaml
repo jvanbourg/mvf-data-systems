@@ -1,0 +1,222 @@
+# MVF Data Systems: Google Search campaign definitions.
+#
+# This file is the source of truth. `mvf_ads.py apply` creates anything here
+# that doesn't exist yet in the Google Ads account and never creates
+# duplicates. New campaigns are always created PAUSED.
+#
+# Bids are starting points chosen without Keyword Planner data (the project's
+# API access level doesn't include it yet). Revisit after `mvf_ads.py research`
+# or the Keyword Planner UI workflow in ads/README.md.
+
+account:
+  # customer_id / login_customer_id go in ads/account.local.yaml (gitignored,
+  # because this repo is public), e.g.:
+  #   customer_id: "1234567890"
+  #   login_customer_id: ""   # only if accessed through a manager (MCC) account
+  currency: USD
+  time_zone: America/Los_Angeles
+
+defaults:
+  days_per_month: 30.4     # Google's standard monthly conversion for daily budgets
+  bidding: manual_cpc      # Controlled bidding for a new account with no conversion data
+  networks:
+    google_search: true
+    search_partners: false
+    display: false
+  location_option: PRESENCE   # People in or regularly in the target area only
+  languages: [en]
+  # Official geo targets, resolved by canonical name through the API at runtime
+  # (never hard-coded IDs). Counties keep targeting to LA + OC only; the
+  # "Los Angeles CA" DMA would also add Ventura, San Bernardino, Riverside and
+  # other counties. Run `mvf_ads.py geo` to inspect.
+  locations:
+    - "Los Angeles County,California,United States"
+    - "Orange County,California,United States"
+
+conversion_action:
+  name: "MVF | Consultation request (website form)"
+  category: SUBMIT_LEAD_FORM
+  counting: ONE_PER_CLICK
+  primary: true
+
+# Campaign-level negatives applied to both campaigns. Single words use BROAD
+# negative matching (any query containing the word); multi-word phrases use
+# PHRASE. "free" is deliberately NOT a negative, so "free consultation"
+# searches still match.
+shared_negatives:
+  # "hire"/"hiring" deliberately omitted: "hire a business systems consultant" is a buyer.
+  broad: [jobs, job, career, careers, salary, salaries, internship, internships,
+          degree, degrees, university, college, course, courses, certification, certificate,
+          training, tutorial, tutorials, template, templates, download, resume, cv, pdf,
+          udemy, coursera, glassdoor, indeed, ziprecruiter, reddit, bootcamp, masters, mba,
+          definition, examples, intern, volunteer, wikipedia]
+  phrase: ["free software", "open source", "interview questions", "what is", "entry level",
+           "how to become", "job description", "near me jobs"]
+
+campaigns:
+  - key: business
+    name: "MVF | Business Consulting | Los Angeles"
+    monthly_budget_usd: 600
+    final_url: "https://www.mvfdatasystems.com/business-consulting/"
+    final_url_suffix: "utm_source=google&utm_medium=cpc&utm_campaign=mvf-business-la&utm_term={keyword}&utm_content={creative}"
+    negatives:
+      broad: [accountant, accounting firm, bookkeeper, bookkeeping, cpa, tax, payroll]
+      phrase: ["erp software", "bi software", "power bi license", "power bi download", "sap jobs", "netsuite partner"]
+    sitelinks:
+      - {text: "Systems Diagnostic", d1: "Find out what's broken", d2: "Written findings and roadmap", url: "https://www.mvfdatasystems.com/business-consulting/operations-diagnostic/"}
+      - {text: "Reporting & BI", d1: "Reports you can trust", d2: "Power BI, SQL, automation", url: "https://www.mvfdatasystems.com/business-consulting/reporting-dashboards/"}
+      - {text: "Data Reconciliation", d1: "Make your systems agree", d2: "ERP, inventory, accounting data", url: "https://www.mvfdatasystems.com/business-consulting/data-integration/"}
+      - {text: "About Marc Fertout", d1: "Senior IT & data consultant", d2: "Engineer, Telecom Paris", url: "https://www.mvfdatasystems.com/about/"}
+    callouts: ["Free First Consultation", "Senior Consultant Direct", "LA & Orange County", "Remote or On-Site", "Independent Advice", "Written Roadmap"]
+    snippets:
+      header: Services
+      values: ["Systems Diagnostic", "Data Reconciliation", "Reporting & Dashboards", "Systems Integration", "Process Improvement"]
+    ad_groups:
+      - name: "Business Systems & Operations"
+        max_cpc_usd: 5.00
+        # Merged "Business Systems" and "Process & Operations" ad groups: at
+        # ~$600/month a fourth ad group would not collect enough data.
+        keywords:
+          exact: ["business systems consultant", "business systems consultant los angeles",
+                  "business process improvement consultant", "business process improvement los angeles",
+                  "operations improvement consultant", "fractional cio los angeles"]
+          phrase: ["business systems consultant", "business process improvement consultant",
+                   "business operations consultant", "business process consultant",
+                   "operations improvement consultant", "fractional cio"]
+        ad:
+          path1: business
+          path2: systems
+          headlines: ["Business Systems Consultant", "Los Angeles IT & Data Expert", "Fix Disconnected Systems",
+                      "Improve Business Reporting", "Get Reliable Business Data", "Business Process Improvement",
+                      "Better Operational Visibility", "Book a Free Consultation", "Fix Reporting & Data Problems",
+                      "Business Systems Diagnostic", "Senior Independent Consultant", "Serving LA & Orange County",
+                      "When Your Systems Don't Agree", "Engineer-Led Consulting", "Practical, Prioritized Roadmap"]
+          descriptions: ["We diagnose disconnected systems, unreliable reports and manual workarounds.",
+                         "Make ERP, inventory and accounting data agree. Clear findings and a practical roadmap.",
+                         "Senior consultant Marc Fertout works directly with owners, CFOs and COOs.",
+                         "Systems diagnostics, reporting, integration and part-time systems leadership."]
+      - name: "Reporting & Business Intelligence"
+        max_cpc_usd: 5.00
+        keywords:
+          exact: ["business intelligence consultant", "business intelligence consultant los angeles",
+                  "power bi consultant", "power bi consultant los angeles", "management reporting consultant",
+                  "business reporting consultant"]
+          phrase: ["business intelligence consultant", "power bi consultant", "management reporting consultant",
+                   "business reporting consultant", "business data analytics consultant", "dashboard consultant"]
+        ad:
+          path1: reporting
+          path2: dashboards
+          headlines: ["BI & Reporting Consultant", "Power BI & SQL Expertise", "Automate Management Reports",
+                      "Dashboards You Can Trust", "Stop Rebuilding Spreadsheets", "Reliable Monthly Reporting",
+                      "Book a Free Consultation", "Los Angeles BI Consultant", "One Version of the Numbers",
+                      "Clear KPIs & Definitions", "Fix Reporting & Data Problems", "Senior Independent Consultant",
+                      "Serving LA & Orange County", "Engineer-Led Consulting", "Power BI Consultant in LA"]
+          descriptions: ["Management reports and dashboards built on clean, reconciled data.",
+                         "Replace manual spreadsheet reporting with automated reports your team owns.",
+                         "Power BI, SQL and Python expertise from an independent senior data consultant.",
+                         "Agreed KPI definitions, a clean data model and dashboards leadership can rely on."]
+      - name: "Data & ERP Integration"
+        max_cpc_usd: 5.00
+        # "ERP consultant" alone is left out: those searchers usually want a
+        # vendor-certified implementation partner for a specific ERP.
+        keywords:
+          exact: ["data integration consultant", "data reconciliation consultant", "erp integration consultant",
+                  "business systems integration services", "data integration consultant los angeles"]
+          phrase: ["data integration consultant", "data reconciliation consultant", "erp integration consultant",
+                   "business systems integration", "system integration consultant"]
+        ad:
+          path1: data
+          path2: integration
+          headlines: ["Data Integration Consultant", "Make Your Systems Agree", "ERP & Accounting Data Fixes",
+                      "Data Reconciliation Help", "Connect Disconnected Systems", "Fix Inventory Data Mismatches",
+                      "Clean Up Your Master Data", "Book a Free Consultation", "Business Systems Integration",
+                      "Stop Re-Keying Data", "Senior Independent Consultant", "Serving LA & Orange County",
+                      "Engineer-Led Consulting", "Find the Root Cause", "Integrations You Can Monitor"]
+          descriptions: ["Trace where ERP, inventory and accounting figures diverge, then fix the root cause.",
+                         "Master data clean-up, reconciliation checks and automated system integrations.",
+                         "Independent senior consultant. Works alongside your CFO, accountant and IT vendors.",
+                         "Request a free consultation. On-site in Los Angeles & Orange County, or remote."]
+
+  - key: healthcare
+    name: "MVF | Healthcare IT | Los Angeles"
+    monthly_budget_usd: 400
+    final_url: "https://www.mvfdatasystems.com/healthcare-consulting/"
+    final_url_suffix: "utm_source=google&utm_medium=cpc&utm_campaign=mvf-healthcare-la&utm_term={keyword}&utm_content={creative}"
+    negatives:
+      broad: [nursing, nurse, medical coding, billing, coder, rcm, hipaa training, emr software, ehr software, epic certification]
+      phrase: ["health informatics degree", "health informatics salary", "health informatics jobs", "fhir tutorial", "hl7 certification"]
+    sitelinks:
+      - {text: "Interoperability & FHIR", d1: "HL7 v2 and FHIR planning", d2: "Terminology and data mapping", url: "https://www.mvfdatasystems.com/healthcare-consulting/interoperability/"}
+      - {text: "Clinical Workflows", d1: "Care pathway optimization", d2: "Requirements before software", url: "https://www.mvfdatasystems.com/healthcare-consulting/workflow-optimization/"}
+      - {text: "Healthcare Projects", d1: "Hospitals, agencies, health-tech", d2: "Documented project summaries", url: "https://www.mvfdatasystems.com/case-studies/"}
+      - {text: "About Marc Fertout", d1: "Health informatics consultant", d2: "Former health IT BU director", url: "https://www.mvfdatasystems.com/about/"}
+    callouts: ["Free First Consultation", "Independent Advice", "Remote or On-Site", "LA & Orange County", "HL7 v2 & FHIR", "Vendor Oversight"]
+    snippets:
+      header: Services
+      values: ["Interoperability Planning", "Data Governance", "Workflow Optimization", "Program Oversight", "Vendor Assessment"]
+    ad_groups:
+      - name: "Healthcare IT & Clinical Workflow"
+        max_cpc_usd: 6.00
+        # Merged "Healthcare IT Consulting" and "Clinical Workflow
+        # Optimization": workflow-consultant searches are low volume.
+        keywords:
+          exact: ["healthcare it consultant", "healthcare it consulting los angeles", "healthcare technology consultant",
+                  "clinical workflow consultant", "clinical workflow optimization consultant"]
+          phrase: ["healthcare it consultant", "healthcare it consulting", "healthcare technology consultant",
+                   "clinical workflow consultant", "clinical workflow optimization consultant", "healthcare it project management consultant"]
+        ad:
+          path1: healthcare
+          path2: it
+          headlines: ["Healthcare IT Consultant", "Health Informatics Expert", "Improve Clinical Workflows",
+                      "Independent Healthcare IT", "Health IT Program Oversight", "Vendor & Technology Assessment",
+                      "Book a Free Consultation", "Care Pathway & Workflow Design", "Former Health IT BU Director",
+                      "Clinical Data & Workflows", "Serving LA & Orange County", "Remote or On-Site Support",
+                      "Owner's Representative", "Requirements Before Software", "Healthcare IT Consulting LA"]
+          descriptions: ["Independent health informatics expertise: workflows, data, interoperability, oversight.",
+                         "Former healthcare IT consulting unit director. Hospitals, agencies and health-tech.",
+                         "Map clinical workflows and information flows before you select or change systems.",
+                         "Request a free consultation. Remote, or on-site in Los Angeles and Orange County."]
+      - name: "Health Informatics & Data"
+        max_cpc_usd: 6.00
+        # "health informatics consultant" kept to EXACT only: the phrase
+        # attracts heavy job-seeker and degree traffic.
+        keywords:
+          exact: ["health informatics consultant", "healthcare data consultant", "healthcare data governance consultant",
+                  "healthcare analytics consultant", "clinical informatics consulting"]
+          phrase: ["healthcare data consultant", "healthcare data governance consultant", "healthcare analytics consultant",
+                   "clinical informatics consulting", "clinical informatics consultant"]
+        ad:
+          path1: health
+          path2: data
+          headlines: ["Healthcare Data Consultant", "Health Data Governance", "Healthcare Analytics Expert",
+                      "Clinical Data Modeling", "Master Data & Data Quality", "Consistent Clinical Reporting",
+                      "Book a Free Consultation", "Clinical Informatics Advisor", "Healthcare Data Warehouses",
+                      "Independent Healthcare IT", "Serving LA & Orange County", "Remote or On-Site Support",
+                      "Health Informatics Expert", "Fix Fragmented Clinical Data", "Health Informatics Consultant"]
+          descriptions: ["Data governance, master data, data models and data quality for healthcare data.",
+                         "Experience includes data governance for a regional platform of 100,000+ patients.",
+                         "Make clinical indicators and reporting consistent across sites and care settings.",
+                         "Request a free consultation with an independent health informatics consultant."]
+      - name: "HL7 FHIR & Interoperability"
+        max_cpc_usd: 6.00
+        # Bare "healthcare data integration" / "healthcare systems integration"
+        # skew to integration-engine software buyers, so consultant/services
+        # variants only.
+        keywords:
+          exact: ["hl7 fhir consultant", "fhir integration consultant", "healthcare interoperability consultant",
+                  "hl7 consultant", "healthcare data integration consultant"]
+          phrase: ["hl7 fhir consultant", "fhir consultant", "fhir integration consultant", "healthcare interoperability consultant",
+                   "healthcare data integration consultant", "medical data integration consultant", "healthcare interoperability services",
+                   "healthcare data integration services"]
+        ad:
+          path1: interop
+          path2: hl7-fhir
+          headlines: ["HL7 FHIR Consulting", "Healthcare Interoperability", "Healthcare Data Integration",
+                      "Plan Your FHIR Integration", "HL7 v2 & FHIR Expertise", "SNOMED CT & LOINC Mapping",
+                      "Well-Scoped EHR Integrations", "Book a Free Consultation", "Interoperability Consultant",
+                      "Independent Healthcare IT", "Vendor-Neutral Advice", "Clinical Data Normalization",
+                      "Remote or On-Site Support", "Serving LA & Orange County", "Health Informatics Expert"]
+          descriptions: ["Plan HL7 v2 and FHIR integrations: use cases, data flows, terminology and phasing.",
+                         "Experience linking EHR data from five hospitals to a national monitoring system.",
+                         "Independent requirements and vendor oversight, from design to acceptance testing.",
+                         "Request a free consultation. Remote, or on-site in Los Angeles and Orange County."]

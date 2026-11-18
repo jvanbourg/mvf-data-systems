@@ -4,8 +4,8 @@
   "description": "Business systems and healthcare IT consulting in Los Angeles.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fbfaf7",
-  "theme_color": "#fbfaf7",
+  "background_color": "#f4f1ea",
+  "theme_color": "#f4f1ea",
   "icons": [
     {
       "src": "/img/icon-192.png",
