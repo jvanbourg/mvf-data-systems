@@ -156,6 +156,9 @@ def explain_error(ex) -> str:
             if "CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION" in text:
                 hint = ("\nHint: the Google Cloud project only has Test access. In Cloud Console open "
                         "APIs & Services > Google Ads API > 'Upgrade access level' and request Explorer access.")
+            elif "NOT_ADS_USER" in text:
+                hint = ("\nHint: the service account isn't a user on any Google Ads account yet. In Google Ads: Admin > "
+                        "Access and security > Users > +, add the service-account email with Standard access.")
             elif "USER_PERMISSION_DENIED" in text:
                 hint = "\nHint: the signed-in Google user can't access this customer ID (or set login_customer_id for a manager account)."
             elif "NOT_ENABLED" in text or "SERVICE_DISABLED" in text:

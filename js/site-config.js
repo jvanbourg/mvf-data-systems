@@ -15,8 +15,8 @@
  */
 window.MVF_CONFIG = {
   ga4Id: "",
-  adsId: "",
-  adsLeadLabel: "",
+  adsId: "AW-18583552195",
+  adsLeadLabel: "xuiDCMDFkrsdEMOBqp1F",
   bookingUrl: "",
   formEndpoint: "https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com"
 };
