@@ -1,52 +1,47 @@
-# MVF Data Systems Website
+# MVF Data Systems website
 
-Static website for [mvfdatasystems.com](https://mvfdatasystems.com), rebuilt as plain HTML/CSS/JS so it can be edited in Cursor and hosted anywhere. This replaces the IONOS MyWebsite Now builder site (which stays live until you switch the domain over).
+Source for [www.mvfdatasystems.com](https://www.mvfdatasystems.com/): plain HTML/CSS/JS, hosted on **GitHub Pages** from the `main` branch. Pushing to `main` deploys the site (live in about a minute).
 
-## Structure
+## Layout
 
-| File | Purpose |
+| Path | Page |
 | --- | --- |
-| `index.html` | Home page (hero, "What I Streamline" list, stats, contact form) |
-| `expertise.html` | "Why MVF": senior expertise and bilingual service |
-| `services.html` | "What I Streamline": the seven service areas in detail |
-| `case-studies.html` | "Track Record": past projects and funding secured |
-| `about.html` | "About Marc": bio and headshot |
-| `css/style.css` | All site styles (cream/ink/violet theme, Antonio + Inter type) |
-| `js/main.js` | Mobile nav toggle and active-link highlighting |
-| `img/` | Site images (Marc's headshot) |
+| `index.html` | Homepage |
+| `business-consulting/` | Business Systems & Operations (Google Ads landing page A) |
+| `business-consulting/operations-diagnostic/` | Business Systems Diagnostic |
+| `business-consulting/reporting-dashboards/` | Reporting & Business Intelligence |
+| `business-consulting/data-integration/` | Data Reconciliation & Systems Integration |
+| `healthcare-consulting/` | Healthcare IT & Informatics (Google Ads landing page B) |
+| `healthcare-consulting/interoperability/` | Healthcare Data Integration & Interoperability |
+| `healthcare-consulting/workflow-optimization/` | Clinical Workflow Optimization |
+| `about/`, `case-studies/`, `contact/`, `privacy/` | Supporting pages |
+| `about.html`, `services.html`, `expertise.html`, `case-studies.html` | Redirects from the old site's URLs |
+| `_partials/` | Shared header, footer, `<head>` tags and contact form |
+| `css/style.css` | All styles |
+| `js/site-config.js` | **Analytics IDs, Ads conversion label, booking link, form endpoint** |
+| `js/main.js` | Mobile nav, attribution capture, form submission, conversion tracking |
+| `tools/site.py` | Build and check tool |
+| `ads/` | Google Ads campaign definitions and control scripts (not published) |
 
-No build step, no dependencies. Edit the HTML/CSS directly and refresh.
-
-## Preview locally
+## Editing workflow
 
 ```bash
-python3 -m http.server 8000
+python3 tools/site.py build   # apply shared partials, version assets, regenerate sitemap.xml
+python3 tools/site.py check   # broken links, titles, descriptions, canonicals, H1s, JSON-LD
+python3 tools/site.py serve   # preview at http://localhost:8000
+git add -A && git commit -m "…" && git push   # deploy
 ```
 
-Then open http://localhost:8000
+Edit page content directly in each `index.html`. To change the header, footer or contact form everywhere, edit the file in `_partials/` and run `build`. Content between `<!-- include:… -->` markers is overwritten by `build`.
 
 ## Contact form
 
-The form on the home page posts to [Formspree](https://formspree.io). To make it live:
+Forms post with JavaScript to FormSubmit (`formEndpoint` in `js/site-config.js`), which emails marc.fertout@mvfdatasystems.com. Spam protection: honeypot field plus a minimum fill time. The Google Ads conversion fires only after FormSubmit confirms success.
 
-1. Create a free Formspree account and a new form.
-2. Replace `YOUR_FORM_ID` in `index.html` with your form's ID.
+## Analytics & conversions
 
-## Deploying to IONOS
+Leave IDs blank and nothing loads. To switch on, fill in `ga4Id`, `adsId` and `adsLeadLabel` in `js/site-config.js`, run `build`, and push. No form content is sent to Google. Browsers sending Global Privacy Control don't load the Ads tag.
 
-Your domain (`mvfdatasystems.com`) stays with IONOS. Two options:
+## Google Ads
 
-### Option A: IONOS Deploy Now (recommended)
-
-1. Push this repo to GitHub.
-2. Sign in at [ionos.space](https://www.ionos.com/hosting/deploy-now) with your IONOS account and connect the GitHub repo as a "Static project".
-3. Every `git push` deploys automatically.
-4. In the Deploy Now project settings, assign `mvfdatasystems.com` as the custom domain.
-
-### Option B: Classic webspace via SFTP
-
-1. In the IONOS control panel, set up hosting webspace and find your SFTP credentials.
-2. Upload all files in this folder (keeping the `css/` and `js/` structure) to the webspace root.
-3. Point the domain at the webspace in IONOS domain settings.
-
-Once the new site is live on the domain, the MyWebsite Now subscription can be cancelled.
+See `ads/README.md`.

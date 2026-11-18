@@ -1,2 +1,13 @@
 .venv/
 .DS_Store
+__pycache__/
+
+# Google Ads: credentials and local state never go in git
+ads/.venv/
+ads/google-ads.yaml
+ads/*.json
+!ads/state.example.json
+ads/reports/
+*client_secret*.json
+*credentials*.json
+.env

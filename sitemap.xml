@@ -2,22 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mvfdatasystems.com/</loc>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.mvfdatasystems.com/services.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.mvfdatasystems.com/business-consulting/</loc>
   </url>
   <url>
-    <loc>https://www.mvfdatasystems.com/expertise.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.mvfdatasystems.com/business-consulting/operations-diagnostic/</loc>
   </url>
   <url>
-    <loc>https://www.mvfdatasystems.com/case-studies.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.mvfdatasystems.com/business-consulting/reporting-dashboards/</loc>
   </url>
   <url>
-    <loc>https://www.mvfdatasystems.com/about.html</loc>
-    <priority>0.7</priority>
+    <loc>https://www.mvfdatasystems.com/business-consulting/data-integration/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/healthcare-consulting/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/healthcare-consulting/interoperability/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/healthcare-consulting/workflow-optimization/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/about/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/case-studies/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/contact/</loc>
+  </url>
+  <url>
+    <loc>https://www.mvfdatasystems.com/privacy/</loc>
   </url>
 </urlset>

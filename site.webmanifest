@@ -1,11 +1,11 @@
 {
   "name": "MVF Data Systems",
   "short_name": "MVF",
-  "description": "IT and data consulting for Los Angeles businesses.",
+  "description": "Business systems and healthcare IT consulting in Los Angeles.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#f4f1ea",
+  "background_color": "#fbfaf7",
+  "theme_color": "#fbfaf7",
   "icons": [
     {
       "src": "/img/icon-192.png",
