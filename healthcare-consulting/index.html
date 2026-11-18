@@ -29,41 +29,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400..700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=57f4656b">
+  <link rel="stylesheet" href="/css/style.css?v=4b00c318">
   <script src="/js/site-config.js?v=ced5c590"></script>
   <script src="/js/main.js?v=b445447a" defer></script>
   <!-- /include:head-common -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Service",
+    "@id": "https://www.mvfdatasystems.com/healthcare-consulting/#service",
+    "name": "Healthcare IT & Health Informatics Consulting",
+    "serviceType": "Healthcare IT consulting",
+    "description": "Independent expertise in health informatics, healthcare interoperability, data architecture, data governance, clinical workflows and healthcare technology program management.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "@id": "https://www.mvfdatasystems.com/#business",
+      "name": "MVF Data Systems",
+      "url": "https://www.mvfdatasystems.com/"
+    },
+    "areaServed": [
       {
-        "@type": "Service",
-        "@id": "https://www.mvfdatasystems.com/healthcare-consulting/#service",
-        "name": "Healthcare IT & Health Informatics Consulting",
-        "serviceType": "Healthcare IT consulting",
-        "description": "Independent expertise in health informatics, healthcare interoperability, data architecture, data governance, clinical workflows and healthcare technology program management.",
-        "provider": { "@type": "ProfessionalService", "@id": "https://www.mvfdatasystems.com/#business", "name": "MVF Data Systems", "url": "https://www.mvfdatasystems.com/" },
-        "areaServed": [
-          { "@type": "AdministrativeArea", "name": "Los Angeles County, California" },
-          { "@type": "AdministrativeArea", "name": "Orange County, California" }
-        ],
-        "url": "https://www.mvfdatasystems.com/healthcare-consulting/"
+        "@type": "AdministrativeArea",
+        "name": "Los Angeles County, California"
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "Can you help us plan an HL7 or FHIR integration?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Marc helps define what needs to be exchanged and why: use cases, data flows, the HL7 v2 messages or FHIR resources involved, terminology mapping (for example SNOMED CT, LOINC, ICD-10), data quality rules, vendor capabilities and a phased plan. Interface build is usually done by your EHR vendor or integration team, with Marc defining requirements and overseeing delivery." } },
-          { "@type": "Question", "name": "Do you work with existing EHR vendors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, on the client side: requirements, data and workflow analysis, and oversight of vendor deliverables. Marc does not hold vendor-specific certifications for US EHR platforms; his role is independent analysis and oversight rather than platform configuration." } },
-          { "@type": "Question", "name": "Can you assess clinical workflows before we select new software?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it is the right order to do things. Mapping current processes and information flows first produces clearer requirements, better selection criteria and fewer surprises during implementation." } },
-          { "@type": "Question", "name": "Can you provide independent oversight of an implementation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Acting as the client-side owner's representative is a core part of Marc's background, including oversight of a prime contractor on a 14-million-euro regional digital care program and managing an integration acceptance-testing campaign for a hospital group's mobile health app." } },
-          { "@type": "Question", "name": "Do you work with healthcare technology companies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Marc has worked with digital health and telemedicine companies on requirements, data models, clinical workflow design and innovation funding applications, and is available as a specialist subcontractor to healthcare consulting firms." } },
-          { "@type": "Question", "name": "Can engagements be delivered remotely?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many healthcare engagements are delivered remotely. Marc is based in the Los Angeles area and can also work on-site across Los Angeles and Orange counties." } }
-        ]
+        "@type": "AdministrativeArea",
+        "name": "Orange County, California"
       }
-    ]
+    ],
+    "url": "https://www.mvfdatasystems.com/healthcare-consulting/"
   }
   </script>
+  <!-- include:faq-schema -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you help us plan an HL7 or FHIR integration?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: use cases, data flows, HL7 v2 messages or FHIR resources, terminology mapping and a phased plan. Your EHR vendor or integration team usually builds the interfaces; I define requirements and oversee delivery."}}, {"@type": "Question", "name": "Do you work with existing EHR vendors?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, on the client side. I don’t hold US EHR vendor certifications; my role is independent analysis and oversight, not platform configuration."}}, {"@type": "Question", "name": "Can you assess clinical workflows before we select new software?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It’s the right order: clearer requirements, better selection, fewer surprises."}}, {"@type": "Question", "name": "Can you provide independent oversight of an implementation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Client-side oversight is core to my background, including a €14M regional digital care program."}}, {"@type": "Question", "name": "Do you work with healthcare technology companies?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: requirements, data models, clinical workflows and funding applications. I also subcontract to healthcare consulting firms."}}, {"@type": "Question", "name": "Is your healthcare experience US-based?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly European (France, Luxembourg and beyond). The standards are international; for US-specific rules such as HIPAA, I work alongside your compliance advisers."}}, {"@type": "Question", "name": "Can engagements be delivered remotely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I’m based in Los Angeles and can also work on-site across Los Angeles and Orange counties."}}]}</script>
+  <!-- /include:faq-schema -->
 </head>
 <body class="theme-health has-mobile-cta">
   <!-- include:header -->
@@ -81,10 +80,9 @@
         <ul class="nav-links" id="primary-nav">
           <li><a href="/business-consulting/" data-nav="business-consulting">Business</a></li>
           <li><a href="/healthcare-consulting/" data-nav="healthcare-consulting" aria-current="page">Healthcare</a></li>
-          <li><a href="/case-studies/" data-nav="case-studies">Projects</a></li>
-          <li><a href="/about/" data-nav="about">About Marc</a></li>
-          <li><a href="/contact/" data-nav="contact">Contact</a></li>
-          <li><a class="btn" href="/contact/">Free Consultation</a></li>
+          <li><a href="/case-studies/" data-nav="case-studies">Track Record</a></li>
+          <li><a href="/about/" data-nav="about">About</a></li>
+          <li><a class="btn" href="/contact/" data-nav="contact">Free Consultation</a></li>
         </ul>
       </nav>
     </div>
@@ -92,234 +90,113 @@
   <!-- /include:header -->
 
   <main id="main">
-    <section class="page-header with-aside">
+    <section class="page-header">
       <div class="container">
         <!-- include:breadcrumb -->
   <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Healthcare Consulting</span></li></ol></nav>
       <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mvfdatasystems.com/"}, {"@type": "ListItem", "position": 2, "name": "Healthcare Consulting", "item": "https://www.mvfdatasystems.com/healthcare-consulting/"}]}</script>
   <!-- /include:breadcrumb -->
-        <div class="hero-grid">
-          <div>
-            <h1>Healthcare IT &amp; <span class="violet">Health Informatics</span> Consulting</h1>
-            <p class="sub">Better clinical data. More effective workflows. Stronger technology execution.</p>
-            <div class="intro">
-              <p>Healthcare organizations operate across complex clinical workflows, information systems, and data environments. Improving these systems requires both technical expertise and a detailed understanding of how care is delivered.</p>
-              <p>MVF Data Systems provides independent expertise in health informatics, interoperability, data architecture, clinical workflows, and technology program management.</p>
-              <p>Led by Marc Fertout, the practice draws on extensive experience with hospitals, healthcare agencies, clinical data platforms, and care coordination initiatives.</p>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#contact">Book a Free Consultation</a>
-              <a class="btn btn-secondary" href="#assessment">See the Healthcare Assessment</a>
-            </div>
-          </div>
-          <aside class="cred-card" aria-label="Healthcare credentials">
-            <div class="who">
-              <img src="/img/marc-fertout-160.jpg" width="160" height="200" alt="Marc Fertout">
-              <div>
-                <div class="name">Marc Fertout</div>
-                <div class="role">Health informatics consultant</div>
-              </div>
-            </div>
-            <ul class="cred-list">
-              <li>Founded and led a healthcare IT consulting business unit in Paris (2007&ndash;2016)</li>
-              <li>Data governance for a regional e-health platform serving 100,000+ patients</li>
-              <li>National health-data governance and multi-hospital interoperability projects for France&rsquo;s Ministry of Health</li>
-              <li>HL7 v2, HL7 FHIR, SNOMED CT, LOINC, ICD-10/ICD-11</li>
-              <li>Engineering degree, T&eacute;l&eacute;com Paris &middot; Data engineering, Panth&eacute;on-Sorbonne</li>
-            </ul>
-          </aside>
-        </div>
+        <h1>Healthcare IT &amp; <span class="violet">Health Informatics</span> Consulting</h1>
+        <p class="sub">Better clinical data. Better workflows. Stronger execution.</p>
+        <p class="intro">Independent health informatics expertise for providers and health-tech companies, built on healthcare IT work since 2007 with hospitals, health agencies and care networks.</p>
+        <div class="actions"><a class="btn" href="#contact">Free Consultation</a></div>
+        <p class="cred-line">Former healthcare IT unit director<span>/</span>HL7 &middot; FHIR &middot; SNOMED CT<span>/</span>Based in Los Angeles</p>
       </div>
     </section>
-
-    <section class="section" aria-labelledby="served-title">
+    <section class="section rule" aria-labelledby="what-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="served-title">Healthcare organizations served</h2>
-          <p>Marc works with the people responsible for making clinical information systems work: CIOs and IT directors, CMIOs and clinical informatics leaders, medical group administrators, operations executives, healthcare data leaders, and digital health founders.</p>
+          <h2 id="what-title">What I do</h2>
         </div>
-        <ul class="tag-list">
-          <li>Independent medical groups</li>
-          <li>Multi-location specialty clinics</li>
-          <li>Healthcare provider networks</li>
-          <li>Community hospitals</li>
-          <li>Outpatient providers</li>
-          <li>Digital health companies</li>
-          <li>Healthcare technology vendors</li>
-          <li>Healthcare consulting firms needing a specialist subcontractor</li>
+        <ul class="fix-list">
+          <li><a class="row-inner" href="/healthcare-consulting/interoperability/"><span class="num">01</span><span class="what">Interoperability &amp; HL7/FHIR planning</span><span class="outcome">Well-scoped integrations between EHRs and platforms.</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li><div class="row-inner"><span class="num">02</span><span class="what">Clinical data architecture &amp; governance</span><span class="outcome">Consistent, governed data across sites.</span><span></span></div></li>
+          <li><a class="row-inner" href="/healthcare-consulting/workflow-optimization/"><span class="num">03</span><span class="what">Clinical workflow optimization</span><span class="outcome">Care pathways built around how care is delivered.</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li><div class="row-inner"><span class="num">04</span><span class="what">Healthcare analytics &amp; reporting</span><span class="outcome">Clinical indicators you can rely on.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">05</span><span class="what">Technology &amp; vendor assessment</span><span class="outcome">An independent view before you commit.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">06</span><span class="what">Independent program oversight</span><span class="outcome">Client-side control from requirements to acceptance.</span><span></span></div></li>
         </ul>
+        <p class="fine">For medical groups, specialty clinics, community hospitals, provider networks, digital health companies and consulting firms needing a specialist.</p>
       </div>
     </section>
-
-    <section class="section alt" aria-labelledby="areas-title">
+    <section class="section rule" aria-labelledby="start-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="areas-title">Where Marc helps</h2>
+          <h2 id="start-title">Start here</h2>
         </div>
-        <div class="grid-2">
-          <article class="card">
-            <h3>Clinical data &amp; interoperability</h3>
-            <p>Plan how data moves between EHRs, care-coordination tools, registries and analytics platforms: data flows, HL7 and FHIR interfaces, terminology mapping, and data normalization ahead of integration or migration.</p>
-            <p style="margin-top:16px"><a class="text-link" href="/healthcare-consulting/interoperability/">Healthcare data integration &amp; interoperability</a></p>
-          </article>
-          <article class="card">
-            <h3>Data governance &amp; reporting</h3>
-            <p>Master data management, data models, data quality and governance frameworks that make clinical indicators and operational reporting consistent across sites and care settings.</p>
-            <p style="margin-top:16px"><a class="text-link" href="/case-studies/#healthcare">Related projects</a></p>
-          </article>
-          <article class="card">
-            <h3>Clinical workflow optimization</h3>
-            <p>Map care pathways, referral and coordination processes, and the information flows behind them, then redesign them with clinicians so technology supports the work instead of adding to it.</p>
-            <p style="margin-top:16px"><a class="text-link" href="/healthcare-consulting/workflow-optimization/">Clinical workflow optimization</a></p>
-          </article>
-          <article class="card">
-            <h3>Technology program management</h3>
-            <p>Client-side leadership of vendors, subcontractors and internal teams from requirements to acceptance: independent oversight, technology and vendor assessment, and IT master plans.</p>
-            <p style="margin-top:16px"><a class="text-link" href="#faq-title">Independent oversight FAQs</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="engagements-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="engagements-title">Selected healthcare engagements</h2>
-          <p>From Marc&rsquo;s documented project history. Program figures describe the client&rsquo;s program, not MVF Data Systems revenue.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <span class="eyebrow">Regional health agency</span>
-            <h3>Regional e-health portfolio data governance</h3>
-            <p>MDM, data model, data warehouse model, BI and data quality for a platform serving 100,000+ patients across 10+ care pathways.</p>
-          </article>
-          <article class="card">
-            <span class="eyebrow">Ministry of Health / ATIH</span>
-            <h3>Multi-hospital BI on high-cost cancer drugs</h3>
-            <p>Source analysis, data normalization and interoperability linking the EHRs of five hospitals to a national monitoring system.</p>
-          </article>
-          <article class="card">
-            <span class="eyebrow">Ministry of Health / ATIH</span>
-            <h3>National health data governance framework</h3>
-            <p>A multi-institution governance methodology for hospital data collections, involving six national health bodies.</p>
-          </article>
-          <article class="card">
-            <span class="eyebrow">National e-health agency, Luxembourg</span>
-            <h3>Hospital&ndash;community care coordination requirements</h3>
-            <p>Requirements and clinical consensus across multidisciplinary networks, aligned with national interoperability services.</p>
-          </article>
-          <article class="card">
-            <span class="eyebrow">University research program</span>
-            <h3>Home telemonitoring for chronic respiratory disease</h3>
-            <p>Owner&rsquo;s representative; assessed a 400-patient pilot and helped scale it to a 1,000+ patient multi-regional program.</p>
-          </article>
-          <article class="card">
-            <span class="eyebrow">Regional health agency</span>
-            <h3>&euro;14M regional digital care program</h3>
-            <p>Owner&rsquo;s representative, then strategic advisor: oversight of the prime contractor and functional consistency program-wide.</p>
-          </article>
-        </div>
-        <p style="margin-top:28px"><a class="text-link" href="/case-studies/#healthcare">Read the full project summaries</a></p>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="assessment-title">
-      <div class="container">
-        <article class="offer featured" id="assessment">
-          <span class="offer-label">Healthcare Data &amp; Workflow Assessment <span class="offer-badge">Recommended first step</span></span>
-          <h2 id="assessment-title" style="margin:10px 0 12px">Improve the flow of information across your healthcare organization.</h2>
-          <p>A specialist assessment of clinical information systems, data interoperability, reporting, and workflows, informed by extensive experience in complex healthcare environments.</p>
-          <div class="offer-cols">
-            <div>
-              <h3 class="h-label">Potential scope</h3>
-              <ul>
-                <li>Clinical workflow review</li>
-                <li>Data architecture assessment</li>
-                <li>Interoperability requirements</li>
-                <li>Data governance and quality</li>
-                <li>Integration planning</li>
-                <li>Technology and vendor assessment</li>
-                <li>Implementation roadmap</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="h-label">What you receive</h3>
-              <ul>
-                <li>Written findings on systems, data and workflows</li>
-                <li>Interoperability and integration requirements</li>
-                <li>Prioritized recommendations</li>
-                <li>A phased implementation roadmap</li>
-              </ul>
-            </div>
+        <div class="products">
+        <article class="product" id="assessment">
+          <span class="num">01</span>
+          <div>
+            <h3>Healthcare Data &amp; Workflow Assessment</h3>
+            <p class="pitch">Better clinical data, integrations, and care workflows.</p>
           </div>
-          <p class="offer-note">Scope is agreed after the free initial conversation and quoted to your organization&rsquo;s requirements.</p>
-          <div class="offer-foot">
-            <span class="offer-price"></span>
-            <a class="btn" href="#contact">Request a Healthcare Assessment</a>
+          <div class="receive">
+            <strong>You receive</strong>
+            Written findings on systems, data and workflows, interoperability requirements, and a phased roadmap.
+            <div class="links"><a class="btn" href="#contact">Request a Healthcare Assessment</a></div>
           </div>
         </article>
+        </div>
       </div>
     </section>
-
-    <section class="section" aria-labelledby="context-title">
-      <div class="container prose">
-        <h2 id="context-title">A note on experience and context</h2>
-        <p>Marc&rsquo;s healthcare track record was built mainly with hospitals, health agencies, ministries and medical organizations in France, Luxembourg and elsewhere in Europe. The underlying problems are the same in US healthcare: fragmented clinical data, hard-to-scope integrations, inconsistent reporting and under-managed vendors. The standards he works with (HL7 v2, FHIR, SNOMED CT, LOINC, ICD) are international.</p>
-        <p>Where a project depends on US-specific regulation, such as HIPAA compliance or CMS program requirements, or on a particular EHR platform&rsquo;s configuration, Marc works alongside your compliance advisers and vendor specialists rather than in place of them.</p>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="faq-title">
+    <section class="section rule" aria-labelledby="hc-proof-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="hc-proof-title">Track record</h2>
         </div>
+        <ul class="fix-list">
+          <li><div class="row-inner"><span class="num">01</span><span class="what">100,000+ patient platform</span><span class="outcome">Data governance, MDM and BI for a regional e-health platform in France.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">02</span><span class="what">Five hospitals, one national system</span><span class="outcome">Linked hospital EHR data to national cancer-drug monitoring.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">03</span><span class="what">&euro;14M regional program</span><span class="outcome">Client-side oversight of the prime contractor.</span><span></span></div></li>
+        </ul>
+        <p style="margin-top:28px"><a class="text-link" href="/case-studies/#healthcare">All healthcare projects</a></p>
+      </div>
+    </section>
+    <section class="section rule" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head"><h2 id="faq-title">Questions</h2></div>
         <div class="faq">
           <details>
             <summary>Can you help us plan an HL7 or FHIR integration?</summary>
-            <div class="answer"><p>Yes. Marc helps define what needs to be exchanged and why: use cases, data flows, the HL7 v2 messages or FHIR resources involved, terminology mapping (for example SNOMED CT, LOINC, ICD-10), data quality rules, vendor capabilities and a phased plan. Interface build is usually done by your EHR vendor or integration team, with Marc defining requirements and overseeing delivery.</p></div>
+            <div class="answer"><p>Yes: use cases, data flows, HL7 v2 messages or FHIR resources, terminology mapping and a phased plan. Your EHR vendor or integration team usually builds the interfaces; I define requirements and oversee delivery.</p></div>
           </details>
           <details>
             <summary>Do you work with existing EHR vendors?</summary>
-            <div class="answer"><p>Yes, on the client side: requirements, data and workflow analysis, and oversight of vendor deliverables. Marc does not hold vendor-specific certifications for US EHR platforms; his role is independent analysis and oversight rather than platform configuration.</p></div>
+            <div class="answer"><p>Yes, on the client side. I don&rsquo;t hold US EHR vendor certifications; my role is independent analysis and oversight, not platform configuration.</p></div>
           </details>
           <details>
             <summary>Can you assess clinical workflows before we select new software?</summary>
-            <div class="answer"><p>Yes, and it is the right order to do things. Mapping current processes and information flows first produces clearer requirements, better selection criteria and fewer surprises during implementation.</p></div>
+            <div class="answer"><p>Yes. It&rsquo;s the right order: clearer requirements, better selection, fewer surprises.</p></div>
           </details>
           <details>
             <summary>Can you provide independent oversight of an implementation?</summary>
-            <div class="answer"><p>Yes. Acting as the client-side owner&rsquo;s representative is a core part of Marc&rsquo;s background, including oversight of the prime contractor on a &euro;14M regional digital care program and managing an integration acceptance-testing campaign for a hospital group&rsquo;s mobile health app.</p></div>
+            <div class="answer"><p>Yes. Client-side oversight is core to my background, including a &euro;14M regional digital care program.</p></div>
           </details>
           <details>
             <summary>Do you work with healthcare technology companies?</summary>
-            <div class="answer"><p>Yes. Marc has worked with digital health and telemedicine companies on requirements, data models, clinical workflow design and innovation funding applications, and is available as a specialist subcontractor to healthcare consulting firms.</p></div>
+            <div class="answer"><p>Yes: requirements, data models, clinical workflows and funding applications. I also subcontract to healthcare consulting firms.</p></div>
+          </details>
+          <details>
+            <summary>Is your healthcare experience US-based?</summary>
+            <div class="answer"><p>Mostly European (France, Luxembourg and beyond). The standards are international; for US-specific rules such as HIPAA, I work alongside your compliance advisers.</p></div>
           </details>
           <details>
             <summary>Can engagements be delivered remotely?</summary>
-            <div class="answer"><p>Yes. Many healthcare engagements are delivered remotely. Marc is based in the Los Angeles area and can also work on-site across Los Angeles and Orange counties.</p></div>
+            <div class="answer"><p>Yes. I&rsquo;m based in Los Angeles and can also work on-site across Los Angeles and Orange counties.</p></div>
           </details>
         </div>
       </div>
     </section>
-
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact" aria-labelledby="hc-contact-title">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <span class="eyebrow">Free consultation</span>
-          <h2 id="contact-title">Discuss your healthcare IT project.</h2>
-          <p>Briefly describe the systems, data, interoperability or workflow challenge. Marc will reply personally to arrange a conversation.</p>
-          <ul class="check-list">
-            <li>Independent, vendor-neutral perspective</li>
-            <li>Senior health informatics expertise from the first call</li>
-            <li>Remote, or on-site in LA and Orange counties</li>
-          </ul>
-          <p class="contact-direct">Prefer email? <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></p>
-          <p><a class="btn btn-secondary" data-booking href="/contact/">Schedule a call</a></p>
+          <h2 class="xl" id="hc-contact-title">Let&rsquo;s talk about your <span class="violet">healthcare IT project.</span></h2>
+          <p>Describe the challenge in a few sentences. The first consultation is free.</p>
+          <p class="contact-direct">Or email <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></p>
         </div>
         <!-- include:form practice=healthcare id=hc -->
-  <form class="lead-form" data-practice="healthcare" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-labelledby="hc-title">
-            <h3 id="hc-title">Request a free consultation</h3>
+  <form class="lead-form" data-practice="healthcare" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-label="Consultation request">
             <div class="form-fields">
               <input type="hidden" name="_subject" value="Website inquiry: Healthcare IT consulting">
               <input type="hidden" name="_template" value="table">
@@ -353,13 +230,12 @@
                 </div>
               </div>
               <div class="field" data-validate>
-                <label for="hc-message">What problem are you trying to solve?</label>
-                <textarea id="hc-message" name="message" required maxlength="4000" placeholder="For example: we need to plan an integration between our EHR and a care-coordination platform."></textarea>
+                <label for="hc-message">What&rsquo;s the problem?</label>
+                <textarea id="hc-message" name="message" required maxlength="4000" rows="4" placeholder="e.g. We need to plan an EHR integration."></textarea>
                 <span class="field-error" aria-live="polite"></span>
               </div>
-              <p class="phi-note"><strong>Please do not include patient information.</strong> This form is not a secure channel for protected health information (PHI). Describe the organizational or technical problem only.</p>
-              <button class="btn" type="submit">Send request</button>
-              <p class="form-note">The first conversation is free and without obligation. Your details are used only to respond to your request. See the <a href="/privacy/">privacy notice</a>.</p>
+              <button class="btn" type="submit">Send</button>
+              <p class="form-note">Please don&rsquo;t include patient information. First consultation free. <a href="/privacy/">Privacy</a>.</p>
             </div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
@@ -367,46 +243,24 @@
       </div>
     </section>
   </main>
-
-  <div class="mobile-cta"><a class="btn" href="#contact">Book a Free Consultation</a></div>
+  <div class="mobile-cta"><a class="btn" href="#contact">Free Consultation</a></div>
   <!-- include:footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="big-mark" aria-hidden="true">MVF Data Systems<span class="dot">.</span></div>
-      <div class="footer-grid">
-        <div>
-          <p>Independent business systems and healthcare IT consulting, led by Marc Fertout. Based in Los Angeles, serving Los Angeles and Orange counties and remote clients.</p>
-        </div>
-        <div>
-          <h2>Business</h2>
-          <ul>
-            <li><a href="/business-consulting/">Business Systems Consulting</a></li>
-            <li><a href="/business-consulting/operations-diagnostic/">Business Systems Diagnostic</a></li>
-            <li><a href="/business-consulting/reporting-dashboards/">Reporting &amp; BI</a></li>
-            <li><a href="/business-consulting/data-integration/">Data Reconciliation &amp; Integration</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Healthcare</h2>
-          <ul>
-            <li><a href="/healthcare-consulting/">Healthcare IT Consulting</a></li>
-            <li><a href="/healthcare-consulting/interoperability/">Interoperability &amp; Data Integration</a></li>
-            <li><a href="/healthcare-consulting/workflow-optimization/">Clinical Workflow Optimization</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Company</h2>
-          <ul>
-            <li><a href="/about/">About Marc Fertout</a></li>
-            <li><a href="/case-studies/">Selected Projects</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></li>
-          </ul>
-        </div>
+      <div class="footer-row">
+        <ul class="footer-links">
+          <li><a href="/business-consulting/">Business</a></li>
+          <li><a href="/healthcare-consulting/">Healthcare</a></li>
+          <li><a href="/case-studies/">Track Record</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <a class="btn" href="/contact/">Free consultation</a>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 MVF Data Systems &middot; Los Angeles, California</span>
-        <a href="/privacy/">Privacy notice</a>
+      <div class="copyright">
+        <span>&copy; 2026 MVF Data Systems &middot; Los Angeles, California &middot; <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></span>
+        <a href="/privacy/">Privacy</a>
       </div>
     </div>
   </footer>

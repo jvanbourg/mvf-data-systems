@@ -41,43 +41,66 @@ CRUMBS = {
     "/healthcare-consulting/interoperability/": "Interoperability & Data Integration",
     "/healthcare-consulting/workflow-optimization/": "Clinical Workflow Optimization",
     "/about/": "About Marc Fertout",
-    "/case-studies/": "Selected Projects",
+    "/case-studies/": "Track Record",
     "/contact/": "Contact",
     "/privacy/": "Privacy Notice",
 }
 
-PHI_NOTE = (
-    '<p class="phi-note"><strong>Please do not include patient information.</strong> '
-    "This form is not a secure channel for protected health information (PHI). "
-    "Describe the organizational or technical problem only.</p>"
-)
+PHI_NOTE = "Please don&rsquo;t include patient information. "
+
+COMPANY_ONLY = """<div class="field" data-validate>
+                <label for="{id}-company">{label}</label>
+                <input type="text" id="{id}-company" name="company" autocomplete="organization" required maxlength="160">
+                <span class="field-error" aria-live="polite"></span>
+              </div>"""
+
+COMPANY_PHONE = """<div class="row">
+                <div class="field" data-validate>
+                  <label for="{id}-company">{label}</label>
+                  <input type="text" id="{id}-company" name="company" autocomplete="organization" required maxlength="160">
+                  <span class="field-error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="{id}-phone">Phone <span class="opt">(optional)</span></label>
+                  <input type="tel" id="{id}-phone" name="phone" autocomplete="tel" maxlength="40">
+                </div>
+              </div>"""
 
 FORM_PRESETS = {
-    "business": dict(
-        form_title="Request a free consultation",
-        subject="Website inquiry: Business consulting",
-        company_label="Company",
-        placeholder="For example: our inventory system and accounting reports don't agree, and month-end reporting takes two weeks.",
-        button="Send request",
-        phi_note="",
-    ),
-    "healthcare": dict(
-        form_title="Request a free consultation",
-        subject="Website inquiry: Healthcare IT consulting",
-        company_label="Organization",
-        placeholder="For example: we need to plan an integration between our EHR and a care-coordination platform.",
-        button="Send request",
-        phi_note=PHI_NOTE,
-    ),
-    "general": dict(
-        form_title="Describe your problem",
-        subject="Website inquiry: General",
-        company_label="Company or organization",
-        placeholder="A few sentences about the systems, data, reporting or workflow problem you're dealing with.",
-        button="Send request",
-        phi_note=PHI_NOTE,
-    ),
+    "business": dict(subject="Website inquiry: Business consulting", label="Company", phone=True,
+                     placeholder="e.g. Our inventory and accounting reports never agree.", phi_note=""),
+    "healthcare": dict(subject="Website inquiry: Healthcare IT consulting", label="Organization", phone=True,
+                       placeholder="e.g. We need to plan an EHR integration.", phi_note=PHI_NOTE),
+    "general": dict(subject="Website inquiry: General", label="Company", phone=True,
+                    placeholder="A few sentences is plenty.", phi_note=PHI_NOTE),
 }
+
+
+def form_vars(attrs: dict) -> dict:
+    practice = attrs.get("practice", "general")
+    preset = FORM_PRESETS[practice]
+    fid = attrs.get("id", practice + "-form")
+    phone = preset["phone"] and attrs.get("phone", "yes") != "no"
+    row = (COMPANY_PHONE if phone else COMPANY_ONLY).format(id=fid, label=preset["label"])
+    return dict(practice=practice, id=fid, subject=preset["subject"], placeholder=preset["placeholder"],
+                phi_note=preset["phi_note"], company_row=row)
+
+
+FAQ_RE = re.compile(r'<details>\s*<summary>(.*?)</summary>\s*<div class="answer">(.*?)</div>\s*</details>', re.S)
+
+
+def strip_tags(x: str) -> str:
+    return html.unescape(re.sub(r"<[^>]+>", "", x)).strip()
+
+
+def faq_schema(src: str) -> str:
+    qa = [{"@type": "Question", "name": strip_tags(q),
+           "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}} for q, a in FAQ_RE.findall(src)]
+    if not qa:
+        return ""
+    return '<script type="application/ld+json">' + json.dumps(
+        {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": qa}, ensure_ascii=False) + "</script>"
+
 
 INCLUDE_RE = re.compile(
     r"(?P<open><!-- include:(?P<name>[\w-]+)(?P<attrs>[^>]*?) -->)(?P<body>.*?)(?P<close><!-- /include:(?P=name) -->)",
@@ -166,9 +189,9 @@ def build() -> int:
             if name == "breadcrumb":
                 body = breadcrumb_html(path)
             elif name == "form":
-                practice = attrs.get("practice", "general")
-                vars = dict(FORM_PRESETS[practice], practice=practice, id=attrs.get("id", practice + "-form"))
-                body = render(partials["form"], vars)
+                body = render(partials["form"], form_vars(attrs))
+            elif name == "faq-schema":
+                body = faq_schema(src)
             else:
                 if name not in partials:
                     raise KeyError(f"{page}: unknown include {name!r}")

@@ -1,5 +1,4 @@
-<form class="lead-form" data-practice="{{practice}}" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-labelledby="{{id}}-title">
-            <h3 id="{{id}}-title">{{form_title}}</h3>
+<form class="lead-form" data-practice="{{practice}}" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-label="Consultation request">
             <div class="form-fields">
               <input type="hidden" name="_subject" value="{{subject}}">
               <input type="hidden" name="_template" value="table">
@@ -21,25 +20,14 @@
                   <span class="field-error" aria-live="polite"></span>
                 </div>
               </div>
-              <div class="row">
-                <div class="field" data-validate>
-                  <label for="{{id}}-company">{{company_label}}</label>
-                  <input type="text" id="{{id}}-company" name="company" autocomplete="organization" required maxlength="160">
-                  <span class="field-error" aria-live="polite"></span>
-                </div>
-                <div class="field">
-                  <label for="{{id}}-phone">Phone <span class="opt">(optional)</span></label>
-                  <input type="tel" id="{{id}}-phone" name="phone" autocomplete="tel" maxlength="40">
-                </div>
-              </div>
+              {{company_row}}
               <div class="field" data-validate>
-                <label for="{{id}}-message">What problem are you trying to solve?</label>
-                <textarea id="{{id}}-message" name="message" required maxlength="4000" placeholder="{{placeholder}}"></textarea>
+                <label for="{{id}}-message">What&rsquo;s the problem?</label>
+                <textarea id="{{id}}-message" name="message" required maxlength="4000" rows="4" placeholder="{{placeholder}}"></textarea>
                 <span class="field-error" aria-live="polite"></span>
               </div>
-              {{phi_note}}
-              <button class="btn" type="submit">{{button}}</button>
-              <p class="form-note">The first conversation is free and without obligation. Your details are used only to respond to your request. See the <a href="/privacy/">privacy notice</a>.</p>
+              <button class="btn" type="submit">Send</button>
+              <p class="form-note">{{phi_note}}First consultation free. <a href="/privacy/">Privacy</a>.</p>
             </div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>

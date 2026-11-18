@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400..700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=57f4656b">
+  <link rel="stylesheet" href="/css/style.css?v=4b00c318">
   <script src="/js/site-config.js?v=ced5c590"></script>
   <script src="/js/main.js?v=b445447a" defer></script>
   <!-- /include:head-common -->
@@ -45,6 +45,9 @@
     "url": "https://www.mvfdatasystems.com/business-consulting/operations-diagnostic/"
   }
   </script>
+  <!-- include:faq-schema -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the diagnostic free?", "acceptedAnswer": {"@type": "Answer", "text": "The first consultation is free. The diagnostic is a paid engagement, quoted after that conversation."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the systems and sites in scope. The timeline is agreed in the proposal before work starts."}}, {"@type": "Question", "name": "What do you need from us?", "acceptedAnswer": {"@type": "Answer", "text": "Time with the people who use the systems, a walkthrough of the main systems and reports, and examples of what’s going wrong. No preparation needed."}}, {"@type": "Question", "name": "What happens afterwards?", "acceptedAnswer": {"@type": "Answer", "text": "You own the roadmap. I can help implement it, or not. No obligation."}}]}</script>
+  <!-- /include:faq-schema -->
 </head>
 <body class="has-mobile-cta">
   <!-- include:header -->
@@ -62,10 +65,9 @@
         <ul class="nav-links" id="primary-nav">
           <li><a href="/business-consulting/" data-nav="business-consulting" aria-current="page">Business</a></li>
           <li><a href="/healthcare-consulting/" data-nav="healthcare-consulting">Healthcare</a></li>
-          <li><a href="/case-studies/" data-nav="case-studies">Projects</a></li>
-          <li><a href="/about/" data-nav="about">About Marc</a></li>
-          <li><a href="/contact/" data-nav="contact">Contact</a></li>
-          <li><a class="btn" href="/contact/">Free Consultation</a></li>
+          <li><a href="/case-studies/" data-nav="case-studies">Track Record</a></li>
+          <li><a href="/about/" data-nav="about">About</a></li>
+          <li><a class="btn" href="/contact/" data-nav="contact">Free Consultation</a></li>
         </ul>
       </nav>
     </div>
@@ -79,105 +81,72 @@
   <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/business-consulting/">Business Consulting</a></li><li><span aria-current="page">Business Systems Diagnostic</span></li></ol></nav>
       <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mvfdatasystems.com/"}, {"@type": "ListItem", "position": 2, "name": "Business Consulting", "item": "https://www.mvfdatasystems.com/business-consulting/"}, {"@type": "ListItem", "position": 3, "name": "Business Systems Diagnostic", "item": "https://www.mvfdatasystems.com/business-consulting/operations-diagnostic/"}]}</script>
   <!-- /include:breadcrumb -->
-        <h1>Business Systems Diagnostic</h1>
-        <p class="sub">Find out what&rsquo;s broken and how to fix it.</p>
-        <div class="intro">
-          <p>When reports conflict, month-end drags on and every fix seems to create a new workaround, the problem is rarely one piece of software. It is how systems, data and processes fit together. The diagnostic looks at all three and tells you, in writing, what is causing the trouble and what to do about it first.</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="#contact">Request a Diagnostic</a>
-          <a class="btn btn-secondary" href="/business-consulting/">All business services</a>
-        </div>
+        <h1>Business Systems <span class="violet">Diagnostic</span></h1>
+        <p class="sub">Find out what&rsquo;s broken. Get a clear plan to fix it.</p>
+        <p class="intro">A focused review of your systems, data, reporting and back-office processes, ending in a written roadmap.</p>
+        <div class="actions"><a class="btn" href="#contact">Request a Diagnostic</a></div>
       </div>
     </section>
-
-    <section class="section" aria-labelledby="when-title">
-      <div class="container grid-2">
-        <div class="prose">
-          <h2 id="when-title">When a diagnostic makes sense</h2>
-          <ul class="check-list" style="margin:14px 0 0">
-            <li>Inventory, sales and accounting figures don&rsquo;t agree, and the team spends days reconciling them.</li>
-            <li>Management reporting is assembled by hand and no one fully trusts it.</li>
-            <li>You suspect the company has outgrown its ERP or accounting system but don&rsquo;t want to replace it on a hunch.</li>
-            <li>A vendor project is late or over budget and you need an independent read.</li>
-            <li>A new CFO, COO or owner wants a clear baseline of how systems and data actually work.</li>
-          </ul>
-        </div>
-        <div class="prose">
-          <h2>What it is not</h2>
-          <p>The diagnostic examines systems, data flows, reporting and operational processes. It is not a financial audit, an accounting review, or a bookkeeping clean-up, and it doesn&rsquo;t replace your accountant or CPA. Where findings touch accounting practice, they are written so your finance team and advisers can act on them.</p>
-          <p>It is also not a software sales exercise. Marc works as an independent consultant, and recommendations favor getting more from the systems you already own whenever that is the better answer.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="how-title">
+    <section class="section rule" aria-labelledby="look-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="how-title">How it works</h2>
-          <p>The exact scope is agreed in advance and depends on the size of the business and the number of systems involved.</p>
+          <h2 id="look-title">What I look at</h2>
         </div>
-        <ol class="steps">
-          <li><h3>Scope &amp; interviews</h3><p>Agree the questions to answer, then speak with the people who run finance, operations, purchasing and IT.</p></li>
-          <li><h3>Systems &amp; data review</h3><p>Walk through each system, how data enters it, how it moves between systems, and which reports depend on it.</p></li>
-          <li><h3>Analysis</h3><p>Trace sample discrepancies to their source, map manual steps and workarounds, and assess key processes.</p></li>
-          <li><h3>Findings &amp; roadmap</h3><p>A written report and a working session to walk leadership through the findings and priorities.</p></li>
-        </ol>
+        <ul class="fix-list">
+          <li><div class="row-inner"><span class="num">01</span><span class="what">Systems &amp; reporting workflows</span><span class="outcome">How data enters, moves and gets reported.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">02</span><span class="what">Data inconsistencies</span><span class="outcome">Where and why the numbers disagree.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">03</span><span class="what">Integration gaps</span><span class="outcome">What&rsquo;s re-keyed, exported or missing.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">04</span><span class="what">Key operational processes</span><span class="outcome">Bottlenecks, workarounds and manual steps.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">05</span><span class="what">Immediate opportunities</span><span class="outcome">Improvements you can make now.</span><span></span></div></li>
+        </ul>
       </div>
     </section>
-
-    <section class="section" aria-labelledby="deliver-title">
-      <div class="container grid-2">
-        <div class="prose">
-          <h2 id="deliver-title">What you receive</h2>
-          <ul class="check-list" style="margin:14px 0 0">
-            <li><strong>Written assessment</strong> of your systems, data flows, reporting and key processes</li>
-            <li><strong>Key findings</strong> and what they mean for the business</li>
-            <li><strong>Root causes</strong> behind the most costly data and reporting problems</li>
-            <li><strong>Prioritized recommendations</strong>, separating quick wins from larger changes</li>
-            <li><strong>Practical implementation roadmap</strong> you can execute with us, your team, or your vendors</li>
-          </ul>
-        </div>
-        <div class="prose">
-          <h2>What we need from you</h2>
-          <p>Access to the people who use the systems day to day, read access (or a guided walkthrough) of the main systems and reports, and examples of the numbers or processes causing the most frustration.</p>
-          <p>Nothing has to be cleaned up or prepared in advance. Seeing things as they really are is the point.</p>
-          <h3>Who leads it</h3>
-          <p>Marc Fertout personally, drawing on experience in IT audits, costed improvement roadmaps, enterprise architecture and data governance. <a href="/about/">About Marc</a>.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="faq-title">
+    <section class="section rule" aria-labelledby="receive-title">
       <div class="container">
-        <div class="section-head"><h2 id="faq-title">Questions about the diagnostic</h2></div>
+        <div class="section-head">
+          <h2 id="receive-title">What you receive</h2>
+        </div>
+        <ul class="fix-list">
+          <li><div class="row-inner"><span class="num">01</span><span class="what">Written assessment</span><span class="outcome">Your systems, data and processes, as they really are.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">02</span><span class="what">Key findings</span><span class="outcome">And what they mean for the business.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">03</span><span class="what">Prioritized recommendations</span><span class="outcome">Quick wins separated from larger changes.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">04</span><span class="what">Implementation roadmap</span><span class="outcome">Execute it with me, your team, or your vendors.</span><span></span></div></li>
+        </ul>
+        <p class="fine">A diagnostic examines systems, data and processes. It is not a financial audit or accounting review.</p>
+      </div>
+    </section>
+    <section class="section rule" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head"><h2 id="faq-title">Questions</h2></div>
         <div class="faq">
           <details>
             <summary>Is the diagnostic free?</summary>
-            <div class="answer"><p>The first consultation is free. The diagnostic itself is a paid, fixed-scope engagement, quoted after that conversation once the scope is clear.</p></div>
+            <div class="answer"><p>The first consultation is free. The diagnostic is a paid engagement, quoted after that conversation.</p></div>
           </details>
           <details>
             <summary>How long does it take?</summary>
-            <div class="answer"><p>It depends on the number of systems, sites and processes in scope. The timeline is set out in the proposal before any work begins, and the diagnostic is deliberately focused rather than open-ended.</p></div>
+            <div class="answer"><p>It depends on the systems and sites in scope. The timeline is agreed in the proposal before work starts.</p></div>
+          </details>
+          <details>
+            <summary>What do you need from us?</summary>
+            <div class="answer"><p>Time with the people who use the systems, a walkthrough of the main systems and reports, and examples of what&rsquo;s going wrong. No preparation needed.</p></div>
           </details>
           <details>
             <summary>What happens afterwards?</summary>
-            <div class="answer"><p>You own the report and roadmap and can act on them however you choose. If you want help implementing, MVF Data Systems offers <a href="/business-consulting/#improvement">systems and reporting improvement</a> projects and <a href="/business-consulting/#fractional">ongoing part-time leadership</a>. There is no obligation.</p></div>
+            <div class="answer"><p>You own the roadmap. I can help implement it, or not. No obligation.</p></div>
           </details>
         </div>
       </div>
     </section>
-
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact" aria-labelledby="diag-contact-title">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <h2 id="contact-title">Request a diagnostic</h2>
-          <p>Tell us briefly what&rsquo;s going wrong. Marc will reply to set up a free initial conversation and, if it&rsquo;s a fit, a written scope and quote.</p>
+          <h2 class="xl" id="diag-contact-title">Request a <span class="violet">diagnostic.</span></h2>
+          <p>Tell me briefly what&rsquo;s going wrong. I&rsquo;ll reply to set up a free first conversation.</p>
           <p class="contact-direct">Or email <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></p>
         </div>
         <!-- include:form practice=business id=diag -->
-  <form class="lead-form" data-practice="business" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-labelledby="diag-title">
-            <h3 id="diag-title">Request a free consultation</h3>
+  <form class="lead-form" data-practice="business" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-label="Consultation request">
             <div class="form-fields">
               <input type="hidden" name="_subject" value="Website inquiry: Business consulting">
               <input type="hidden" name="_template" value="table">
@@ -211,13 +180,12 @@
                 </div>
               </div>
               <div class="field" data-validate>
-                <label for="diag-message">What problem are you trying to solve?</label>
-                <textarea id="diag-message" name="message" required maxlength="4000" placeholder="For example: our inventory system and accounting reports don't agree, and month-end reporting takes two weeks."></textarea>
+                <label for="diag-message">What&rsquo;s the problem?</label>
+                <textarea id="diag-message" name="message" required maxlength="4000" rows="4" placeholder="e.g. Our inventory and accounting reports never agree."></textarea>
                 <span class="field-error" aria-live="polite"></span>
               </div>
-              
-              <button class="btn" type="submit">Send request</button>
-              <p class="form-note">The first conversation is free and without obligation. Your details are used only to respond to your request. See the <a href="/privacy/">privacy notice</a>.</p>
+              <button class="btn" type="submit">Send</button>
+              <p class="form-note">First consultation free. <a href="/privacy/">Privacy</a>.</p>
             </div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
@@ -225,46 +193,24 @@
       </div>
     </section>
   </main>
-
-  <div class="mobile-cta"><a class="btn" href="#contact">Request a Diagnostic</a></div>
+  <div class="mobile-cta"><a class="btn" href="#contact">Free Consultation</a></div>
   <!-- include:footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="big-mark" aria-hidden="true">MVF Data Systems<span class="dot">.</span></div>
-      <div class="footer-grid">
-        <div>
-          <p>Independent business systems and healthcare IT consulting, led by Marc Fertout. Based in Los Angeles, serving Los Angeles and Orange counties and remote clients.</p>
-        </div>
-        <div>
-          <h2>Business</h2>
-          <ul>
-            <li><a href="/business-consulting/">Business Systems Consulting</a></li>
-            <li><a href="/business-consulting/operations-diagnostic/">Business Systems Diagnostic</a></li>
-            <li><a href="/business-consulting/reporting-dashboards/">Reporting &amp; BI</a></li>
-            <li><a href="/business-consulting/data-integration/">Data Reconciliation &amp; Integration</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Healthcare</h2>
-          <ul>
-            <li><a href="/healthcare-consulting/">Healthcare IT Consulting</a></li>
-            <li><a href="/healthcare-consulting/interoperability/">Interoperability &amp; Data Integration</a></li>
-            <li><a href="/healthcare-consulting/workflow-optimization/">Clinical Workflow Optimization</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Company</h2>
-          <ul>
-            <li><a href="/about/">About Marc Fertout</a></li>
-            <li><a href="/case-studies/">Selected Projects</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></li>
-          </ul>
-        </div>
+      <div class="footer-row">
+        <ul class="footer-links">
+          <li><a href="/business-consulting/">Business</a></li>
+          <li><a href="/healthcare-consulting/">Healthcare</a></li>
+          <li><a href="/case-studies/">Track Record</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <a class="btn" href="/contact/">Free consultation</a>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 MVF Data Systems &middot; Los Angeles, California</span>
-        <a href="/privacy/">Privacy notice</a>
+      <div class="copyright">
+        <span>&copy; 2026 MVF Data Systems &middot; Los Angeles, California &middot; <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></span>
+        <a href="/privacy/">Privacy</a>
       </div>
     </div>
   </footer>

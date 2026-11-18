@@ -29,41 +29,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400..700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=57f4656b">
+  <link rel="stylesheet" href="/css/style.css?v=4b00c318">
   <script src="/js/site-config.js?v=ced5c590"></script>
   <script src="/js/main.js?v=b445447a" defer></script>
   <!-- /include:head-common -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Service",
+    "@id": "https://www.mvfdatasystems.com/business-consulting/#service",
+    "name": "Business Systems & Operations Consulting",
+    "serviceType": "Business systems consulting",
+    "description": "Diagnosis and improvement of disconnected business systems, unreliable reporting, data reconciliation problems and inefficient back-office processes for small and midsize companies.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "@id": "https://www.mvfdatasystems.com/#business",
+      "name": "MVF Data Systems",
+      "url": "https://www.mvfdatasystems.com/"
+    },
+    "areaServed": [
       {
-        "@type": "Service",
-        "@id": "https://www.mvfdatasystems.com/business-consulting/#service",
-        "name": "Business Systems & Operations Consulting",
-        "serviceType": "Business systems consulting",
-        "description": "Diagnosis and improvement of disconnected business systems, unreliable reporting, data reconciliation problems and inefficient back-office processes for small and midsize companies.",
-        "provider": { "@type": "ProfessionalService", "@id": "https://www.mvfdatasystems.com/#business", "name": "MVF Data Systems", "url": "https://www.mvfdatasystems.com/" },
-        "areaServed": [
-          { "@type": "AdministrativeArea", "name": "Los Angeles County, California" },
-          { "@type": "AdministrativeArea", "name": "Orange County, California" }
-        ],
-        "url": "https://www.mvfdatasystems.com/business-consulting/"
+        "@type": "AdministrativeArea",
+        "name": "Los Angeles County, California"
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What types of companies do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "Established, privately held small and midsize companies, typically around $5M to $100M in annual revenue: distributors and wholesalers, manufacturers, multi-location service businesses and family-owned companies whose operations have outgrown their systems." } },
-          { "@type": "Question", "name": "Can you help if our ERP and accounting software don't agree?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Numbers that don't match between systems are usually a systems and data problem: inconsistent master data, integration mappings, timing differences or manual adjustments. Marc traces where the figures diverge, identifies the root causes and helps fix the underlying process or integration. Accounting judgments and financial statements remain with your accountant or CPA." } },
-          { "@type": "Question", "name": "Do you replace our accountant or IT team?", "acceptedAnswer": { "@type": "Answer", "text": "No. MVF Data Systems works alongside your CFO, controller, accountant, IT staff or managed IT provider. It does not provide accounting, bookkeeping, audit or tax services." } },
-          { "@type": "Question", "name": "Can you work with our existing software vendors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Marc can work directly with your ERP, accounting, inventory or reporting vendors, define requirements, review their proposals and hold deliverables to agreed acceptance criteria." } },
-          { "@type": "Question", "name": "Do you implement the improvements or only provide recommendations?", "acceptedAnswer": { "@type": "Answer", "text": "Both. A diagnostic produces written recommendations and a roadmap. Marc can then implement improvements directly, such as reporting, dashboards, data reconciliation and integrations, or oversee vendors doing the work. There is no obligation to continue after a diagnostic." } },
-          { "@type": "Question", "name": "Can you work on-site in Los Angeles?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Marc is based in the Los Angeles area and can work on-site across Los Angeles and Orange counties. Much of the analysis can also be done remotely, and most engagements combine both." } }
-        ]
+        "@type": "AdministrativeArea",
+        "name": "Orange County, California"
       }
-    ]
+    ],
+    "url": "https://www.mvfdatasystems.com/business-consulting/"
   }
   </script>
+  <!-- include:faq-schema -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What types of companies do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "Privately held and family-owned companies of roughly $5M–$100M in revenue: distributors, wholesalers, manufacturers and multi-location service businesses."}}, {"@type": "Question", "name": "Can you help if our ERP and accounting software don’t agree?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I trace where the figures diverge (master data, mappings, timing, manual adjustments) and fix the cause. Accounting judgments stay with your accountant or CPA."}}, {"@type": "Question", "name": "Do you replace our accountant or IT team?", "acceptedAnswer": {"@type": "Answer", "text": "No. I work alongside them. I don’t provide accounting, bookkeeping, audit or tax services."}}, {"@type": "Question", "name": "Can you work with our existing software vendors?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I define requirements, review proposals and hold vendors to agreed acceptance criteria."}}, {"@type": "Question", "name": "Do you implement the improvements or only recommend them?", "acceptedAnswer": {"@type": "Answer", "text": "Both. I can implement the fixes myself or oversee your vendors. There’s no obligation after a diagnostic."}}, {"@type": "Question", "name": "Is the diagnostic free?", "acceptedAnswer": {"@type": "Answer", "text": "The first consultation is free. The diagnostic is a paid engagement, quoted once the scope is clear."}}, {"@type": "Question", "name": "Can you work on-site in Los Angeles?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, across Los Angeles and Orange counties. Much of the work can also be done remotely."}}]}</script>
+  <!-- /include:faq-schema -->
 </head>
 <body class="has-mobile-cta">
   <!-- include:header -->
@@ -81,10 +80,9 @@
         <ul class="nav-links" id="primary-nav">
           <li><a href="/business-consulting/" data-nav="business-consulting" aria-current="page">Business</a></li>
           <li><a href="/healthcare-consulting/" data-nav="healthcare-consulting">Healthcare</a></li>
-          <li><a href="/case-studies/" data-nav="case-studies">Projects</a></li>
-          <li><a href="/about/" data-nav="about">About Marc</a></li>
-          <li><a href="/contact/" data-nav="contact">Contact</a></li>
-          <li><a class="btn" href="/contact/">Free Consultation</a></li>
+          <li><a href="/case-studies/" data-nav="case-studies">Track Record</a></li>
+          <li><a href="/about/" data-nav="about">About</a></li>
+          <li><a class="btn" href="/contact/" data-nav="contact">Free Consultation</a></li>
         </ul>
       </nav>
     </div>
@@ -92,279 +90,138 @@
   <!-- /include:header -->
 
   <main id="main">
-    <section class="page-header with-aside">
+    <section class="page-header">
       <div class="container">
         <!-- include:breadcrumb -->
   <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Business Consulting</span></li></ol></nav>
       <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mvfdatasystems.com/"}, {"@type": "ListItem", "position": 2, "name": "Business Consulting", "item": "https://www.mvfdatasystems.com/business-consulting/"}]}</script>
   <!-- /include:breadcrumb -->
-        <div class="hero-grid">
+        <h1>Business Systems &amp; Operations Consulting <span class="violet">in Los Angeles</span></h1>
+        <p class="sub">Fix disconnected systems. Get reliable numbers.</p>
+        <p class="intro">When accounting, inventory and operations tools stop agreeing, I find out why and fix it, working alongside your finance team, IT and vendors.</p>
+        <div class="actions"><a class="btn" href="#contact">Free Consultation</a></div>
+        <p class="cred-line">T&eacute;l&eacute;com Paris engineer<span>/</span>IT audit &amp; data governance<span>/</span>Based in Los Angeles</p>
+      </div>
+    </section>
+    <section class="section rule" aria-labelledby="problems-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="problems-title">Sound familiar?</h2>
+          <p class="lede" style="margin-top:16px">Typical clients: privately held companies of roughly $5M&ndash;$100M in revenue. Distributors, manufacturers, multi-location service businesses.</p>
+        </div>
+        <ul class="fix-list">
+          <li><div class="row-inner"><span class="num">01</span><span class="what">Accounting and inventory reports disagree.</span><span class="outcome">Trace every gap to its source.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">02</span><span class="what">Month-end reporting takes weeks.</span><span class="outcome">Automated reports you can trust.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">03</span><span class="what">Your systems don&rsquo;t talk to each other.</span><span class="outcome">Connected, monitored data flows.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">04</span><span class="what">Critical work runs on spreadsheets.</span><span class="outcome">Fewer manual workarounds.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">05</span><span class="what">Profitability is guesswork.</span><span class="outcome">Clear numbers by product, customer and location.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">06</span><span class="what">Vendors are late or over budget.</span><span class="outcome">Independent, client-side oversight.</span><span></span></div></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section rule" aria-labelledby="services">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="services">How I can help</h2>
+        </div>
+        <div class="products">
+        <article class="product" id="diagnostic">
+          <span class="num">01</span>
           <div>
-            <h1>Business Systems &amp; Operations Consulting <span class="violet">in Los Angeles</span></h1>
-            <p class="sub">Fix disconnected systems. Get reliable numbers. Run your business with better information.</p>
-            <div class="intro">
-              <p>Growing businesses often outgrow the systems and processes that supported their early success. Accounting software, inventory systems, spreadsheets, and operational tools become disconnected, making it difficult to obtain accurate information or manage the business efficiently.</p>
-              <p>MVF Data Systems helps identify and resolve these problems through structured diagnosis, data reconciliation, systems integration, better reporting, and practical operational improvements.</p>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#contact">Book a Free Consultation</a>
-              <a class="btn btn-secondary" href="#diagnostic">See the Business Systems Diagnostic</a>
-            </div>
+            <h3>Business Systems Diagnostic<span class="pill">Start here</span></h3>
+            <p class="pitch">Find out what&rsquo;s broken. Get a clear plan to fix it.</p>
           </div>
-          <aside class="cred-card" aria-label="Who you'll work with">
-            <div class="who">
-              <img src="/img/marc-fertout-160.jpg" width="160" height="200" alt="Marc Fertout">
-              <div>
-                <div class="name">Marc Fertout</div>
-                <div class="role">Independent business systems &amp; data consultant</div>
-              </div>
-            </div>
-            <ul class="cred-list">
-              <li>Engineering degree in computer science (T&eacute;l&eacute;com Paris) and data engineering certificate (Panth&eacute;on-Sorbonne)</li>
-              <li>IT audits, costed roadmaps, data governance and BI for public institutions and large companies</li>
-              <li>Led a systems rollout across 12 countries; oversaw the prime contractor on a &euro;14M regional program</li>
-              <li>You work with Marc directly, from first call to delivery</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="problems-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="problems-title">Common problems we&rsquo;re asked to fix</h2>
-          <p>Typical clients are privately held and family-owned companies of roughly $5M&ndash;$100M in revenue: distributors and wholesalers, manufacturers, multi-location service businesses, and other operationally complex firms.</p>
-        </div>
-        <div class="grid-2">
-          <ul class="problem-list">
-            <li>Accounting and inventory reports disagree, and nobody is sure which is right.</li>
-            <li>The ERP, accounting and operational systems don&rsquo;t talk to each other.</li>
-            <li>Data is spread across disconnected software platforms.</li>
-            <li>Management reports depend on manual spreadsheet work.</li>
-            <li>Monthly reporting is slow and unreliable.</li>
-            <li>It&rsquo;s hard to see accurate profitability by product, customer or location.</li>
-          </ul>
-          <ul class="problem-list">
-            <li>Inventory and purchasing information is inconsistent.</li>
-            <li>Back-office processes have become slow and error-prone.</li>
-            <li>Technology vendors are underperforming or projects are stalled.</li>
-            <li>The company has outgrown the systems it started with.</li>
-            <li>Leadership lacks reliable visibility into business performance.</li>
-            <li>A system change is coming and you want an independent view first.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="help-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="help-title">How Marc helps</h2>
-          <p>The work starts with understanding how information actually moves through your business, then fixing the causes of the problems rather than patching the symptoms.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card">
-            <h3>Diagnose what&rsquo;s really wrong</h3>
-            <p>A structured review of your systems, data flows, reports and key processes to find why numbers conflict and work takes too long.</p>
-            <p style="margin-top:16px"><a class="text-link" href="/business-consulting/operations-diagnostic/">Business Systems Diagnostic</a></p>
-          </article>
-          <article class="card">
-            <h3>Make the numbers reconcile</h3>
-            <p>Trace differences between ERP, inventory, sales and accounting data, then correct the master data, mappings and integrations that cause them.</p>
-            <p style="margin-top:16px"><a class="text-link" href="/business-consulting/data-integration/">Data reconciliation &amp; systems integration</a></p>
-          </article>
-          <article class="card">
-            <h3>Build reporting you can trust</h3>
-            <p>Replace manual spreadsheet assembly with consistent, automated management reporting and dashboards built on clean data.</p>
-            <p style="margin-top:16px"><a class="text-link" href="/business-consulting/reporting-dashboards/">Reporting &amp; business intelligence</a></p>
-          </article>
-          <article class="card">
-            <h3>Fix processes and manage vendors</h3>
-            <p>Streamline back-office workflows, define clear requirements, and hold software vendors and implementers to what was agreed.</p>
-            <p style="margin-top:16px"><a class="text-link" href="#fractional">Ongoing systems leadership</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="services" aria-labelledby="offers-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="offers-title">Engagement options</h2>
-          <p>Every engagement is scoped to your situation and quoted after the free initial conversation.</p>
-        </div>
-
-        <article class="offer featured" id="diagnostic">
-          <span class="offer-label">Business Systems Diagnostic <span class="offer-badge">Recommended first step</span></span>
-          <h3>Find out what&rsquo;s broken and how to fix it.</h3>
-          <p>A focused assessment of your systems, data, reporting, and back-office processes. We identify the underlying causes of operational inefficiency and provide a practical roadmap for improvement.</p>
-          <div class="offer-cols">
-            <div>
-              <h4>Typical scope</h4>
-              <ul>
-                <li>Review existing systems and reporting workflows</li>
-                <li>Identify data inconsistencies and integration problems</li>
-                <li>Assess key operational processes</li>
-                <li>Identify immediate improvement opportunities</li>
-                <li>Prioritize recommended changes</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Written assessment</li>
-                <li>Key findings and business implications</li>
-                <li>Prioritized recommendations</li>
-                <li>Practical implementation roadmap</li>
-              </ul>
-            </div>
-          </div>
-          <p class="offer-note">A diagnostic examines systems, data and processes. It is not a financial audit or an accounting review.</p>
-          <div class="offer-foot">
-            <span class="offer-price"></span>
-            <a class="btn" href="#contact">Request a Diagnostic</a>
+          <div class="receive">
+            <strong>You receive</strong>
+            A written assessment of your systems, data and reporting, the root causes, and a prioritized roadmap.
+            <div class="links"><a class="btn" href="#contact">Request a Diagnostic</a><a class="text-link" href="/business-consulting/operations-diagnostic/">How it works</a></div>
           </div>
         </article>
-
-        <div class="offer-grid" style="margin-top:24px">
-          <article class="offer" id="improvement">
-            <span class="offer-label">Systems &amp; Reporting Improvement</span>
-            <h3>Turn recommendations into working improvements.</h3>
-            <p>Once the problems are understood, we help implement better reporting, cleaner data, integrated systems, and more efficient workflows.</p>
-            <div class="offer-body">
-              <h4>Potential services</h4>
-              <ul class="cols-2">
-                  <li>Data reconciliation</li>
-                  <li>Reporting automation</li>
-                  <li>Management dashboards</li>
-                  <li>Business intelligence implementation</li>
-                  <li>System integration</li>
-                  <li>Process improvements</li>
-                  <li>Vendor coordination</li>
-                  <li>Data architecture improvements</li>
-                </ul>
-            </div>
-            <p class="offer-note">Deliverables depend on the agreed scope.</p>
-            <div class="offer-foot">
-              <span class="offer-price"></span>
-              <a class="btn" href="#contact">Discuss a Project</a>
-            </div>
-          </article>
-
-          <article class="offer" id="fractional">
-            <span class="offer-label">Fractional Systems &amp; Data Leadership</span>
-            <h3>Experienced technology leadership without a full-time hire.</h3>
-            <p>Ongoing senior oversight of your organization&rsquo;s systems, data, reporting, and technology improvement initiatives, on a flexible part-time or contract basis.</p>
-            <div class="offer-body">
-              <h4>Potential responsibilities</h4>
-              <ul class="cols-2">
-                  <li>Systems improvement roadmap</li>
-                  <li>Data quality and governance</li>
-                  <li>Reporting infrastructure</li>
-                  <li>Vendor and implementation oversight</li>
-                  <li>Technical project leadership</li>
-                  <li>Operational systems optimization</li>
-                </ul>
-            </div>
-            <p class="offer-note">A technology and systems role, not a fractional CFO or finance function.</p>
-            <div class="offer-foot">
-              <span class="offer-price"></span>
-              <a class="btn" href="#contact">Discuss Ongoing Support</a>
-            </div>
-          </article>
+        <article class="product" id="improvement">
+          <span class="num">02</span>
+          <div>
+            <h3>Systems &amp; Reporting Improvement</h3>
+            <p class="pitch">Reliable numbers. Connected systems. Less manual work.</p>
+          </div>
+          <div class="receive">
+            <strong>You receive</strong>
+            Hands-on fixes: data reconciliation, reporting automation, dashboards and system integration.
+            <div class="links"><a class="btn" href="#contact">Discuss a Project</a><a class="text-link" href="/business-consulting/reporting-dashboards/">Reporting &amp; BI</a><a class="text-link" href="/business-consulting/data-integration/">Data integration</a></div>
+          </div>
+        </article>
+        <article class="product" id="fractional">
+          <span class="num">03</span>
+          <div>
+            <h3>Fractional Systems &amp; Data Leadership</h3>
+            <p class="pitch">Senior technology expertise, without a full-time hire.</p>
+          </div>
+          <div class="receive">
+            <strong>You receive</strong>
+            Part-time ownership of your systems roadmap, data quality, reporting and vendors.
+            <div class="links"><a class="btn" href="#contact">Discuss Ongoing Support</a></div>
+          </div>
+        </article>
         </div>
+        <p class="fine">Not accounting, bookkeeping, audit or tax services. I work alongside your CFO and accountant.</p>
       </div>
     </section>
-
-    <section class="section alt" aria-labelledby="experience-title">
-      <div class="container about-grid">
-        <figure class="portrait">
-          <img src="/img/marc-fertout-600.jpg" width="600" height="750" alt="Portrait of Marc Fertout" loading="lazy">
-          <figcaption>Marc Fertout, Founder &amp; Principal Consultant</figcaption>
-        </figure>
-        <div class="prose">
-          <h2 id="experience-title">Marc&rsquo;s relevant experience</h2>
-          <p>Marc is an engineer by training who has spent his career turning complicated systems and data situations into clear, workable projects. The disciplines that fix a struggling business back office are the ones he has applied for large organizations:</p>
-          <ul class="check-list" style="margin:18px 0 0">
-            <li><strong>IT and systems audits</strong>, as an independent IT/ICT audit consultant and in costed improvement roadmaps.</li>
-            <li><strong>Financial and performance reporting</strong>: analytic budgeting, worldwide financial reporting and performance-management BI for public institutions and large companies.</li>
-            <li><strong>Enterprise system rollouts</strong>: directed a worldwide HR and equipment information-system rollout for a global oilfield-services company, leading 12 people across 12 countries.</li>
-            <li><strong>Operations and back-office improvement</strong>: managed the operations of a care-coordination agency, streamlining internal processes, back-office and mobile-team planning.</li>
-            <li><strong>Vendor oversight</strong>: client-side leadership of vendors, subcontractors and internal teams from requirements through acceptance, including a prime contractor on a &euro;14M program.</li>
-            <li><strong>Data management</strong>: master data, data quality, data modeling and data warehouse design.</li>
-          </ul>
-          <p style="margin-top:20px">Tools include SQL, Python, Power BI (DAX, Power Query) and relational databases such as SQL Server, Oracle and MySQL, but the choice of tool follows the problem, and often the best answer is getting more out of the systems you already own.</p>
-          <p><a class="text-link" href="/case-studies/#business">See selected projects</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="process-title">
+    <section class="section rule" aria-labelledby="proof-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="process-title">Engagement process</h2>
+          <h2 id="proof-title">Proven on complex systems</h2>
         </div>
-        <ol class="steps">
-          <li><h3>Free consultation</h3><p>Talk through the problem, the systems involved and what a good outcome looks like.</p></li>
-          <li><h3>Scoped proposal</h3><p>A written scope, approach and quote. Usually the Business Systems Diagnostic comes first.</p></li>
-          <li><h3>Diagnose &amp; recommend</h3><p>Findings, root causes and a prioritized roadmap you can act on with or without us.</p></li>
-          <li><h3>Implement &amp; support</h3><p>Hands-on delivery, vendor coordination, or ongoing part-time leadership if you want it.</p></li>
-        </ol>
+        <ul class="fix-list">
+          <li><div class="row-inner"><span class="num">01</span><span class="what">Financial &amp; performance reporting</span><span class="outcome">Analytic budgeting and worldwide financial reporting for public institutions and a major energy company.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">02</span><span class="what">Global systems rollout</span><span class="outcome">Directed an HR and equipment system rollout across 12 countries on 5 continents.</span><span></span></div></li>
+          <li><div class="row-inner"><span class="num">03</span><span class="what">Vendor oversight</span><span class="outcome">Client-side control of a prime contractor on a &euro;14M program.</span><span></span></div></li>
+        </ul>
+        <p style="margin-top:28px"><a class="text-link" href="/case-studies/">Full track record</a></p>
       </div>
     </section>
-
-    <section class="section alt" aria-labelledby="faq-title">
+    <section class="section rule" aria-labelledby="faq-title">
       <div class="container">
-        <div class="section-head">
-          <h2 id="faq-title">Frequently asked questions</h2>
-        </div>
+        <div class="section-head"><h2 id="faq-title">Questions</h2></div>
         <div class="faq">
           <details>
             <summary>What types of companies do you work with?</summary>
-            <div class="answer"><p>Established, privately held small and midsize companies, typically around $5M to $100M in annual revenue: distributors and wholesalers, manufacturers, multi-location service businesses and family-owned companies whose operations have outgrown their systems. Owners, CEOs, CFOs, COOs and operations or finance directors are usually the people we speak with.</p></div>
+            <div class="answer"><p>Privately held and family-owned companies of roughly $5M&ndash;$100M in revenue: distributors, wholesalers, manufacturers and multi-location service businesses.</p></div>
           </details>
           <details>
             <summary>Can you help if our ERP and accounting software don&rsquo;t agree?</summary>
-            <div class="answer"><p>Yes. Numbers that don&rsquo;t match between systems are usually a systems and data problem: inconsistent item or customer master data, integration mappings, timing differences, or manual adjustments that never flow back. Marc traces where the figures diverge, identifies the root causes, and helps fix the underlying process or integration. Accounting judgments and financial statements remain with your accountant or CPA.</p></div>
+            <div class="answer"><p>Yes. I trace where the figures diverge (master data, mappings, timing, manual adjustments) and fix the cause. Accounting judgments stay with your accountant or CPA.</p></div>
           </details>
           <details>
             <summary>Do you replace our accountant or IT team?</summary>
-            <div class="answer"><p>No. MVF Data Systems works alongside your CFO, controller, accountant, IT staff or managed IT provider, and fills the gap between them: the systems and information problems nobody owns. It does not provide accounting, bookkeeping, audit or tax services.</p></div>
+            <div class="answer"><p>No. I work alongside them. I don&rsquo;t provide accounting, bookkeeping, audit or tax services.</p></div>
           </details>
           <details>
             <summary>Can you work with our existing software vendors?</summary>
-            <div class="answer"><p>Yes, and that is often the most cost-effective route. Marc can work directly with your ERP, accounting, inventory or reporting vendors: define requirements, review proposals, and hold deliverables to agreed acceptance criteria.</p></div>
+            <div class="answer"><p>Yes. I define requirements, review proposals and hold vendors to agreed acceptance criteria.</p></div>
           </details>
           <details>
-            <summary>Do you implement the improvements or only provide recommendations?</summary>
-            <div class="answer"><p>Both. A diagnostic produces written recommendations and a roadmap. Marc can then implement improvements directly, such as reporting, dashboards, data reconciliation and integrations, or oversee the vendors doing the work. There is no obligation to continue after a diagnostic.</p></div>
+            <summary>Do you implement the improvements or only recommend them?</summary>
+            <div class="answer"><p>Both. I can implement the fixes myself or oversee your vendors. There&rsquo;s no obligation after a diagnostic.</p></div>
+          </details>
+          <details>
+            <summary>Is the diagnostic free?</summary>
+            <div class="answer"><p>The first consultation is free. The diagnostic is a paid engagement, quoted once the scope is clear.</p></div>
           </details>
           <details>
             <summary>Can you work on-site in Los Angeles?</summary>
-            <div class="answer"><p>Yes. Marc is based in the Los Angeles area and can work on-site across Los Angeles and Orange counties, from the San Fernando Valley and the Westside to Long Beach and Irvine. Much of the analysis can also be done remotely, and most engagements combine both.</p></div>
+            <div class="answer"><p>Yes, across Los Angeles and Orange counties. Much of the work can also be done remotely.</p></div>
           </details>
         </div>
       </div>
     </section>
-
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact" aria-labelledby="biz-contact-title">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <span class="eyebrow">Free consultation</span>
-          <h2 id="contact-title">Tell us where your systems are letting you down.</h2>
-          <p>Describe the problem in a few sentences. Marc will reply personally to arrange a conversation, with no cost and no obligation.</p>
-          <ul class="check-list">
-            <li>Senior consultant from the first call</li>
-            <li>Practical recommendations, not a sales pitch</li>
-            <li>On-site in LA and Orange counties, or remote</li>
-          </ul>
-          <p class="contact-direct">Prefer email? <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></p>
-          <p><a class="btn btn-secondary" data-booking href="/contact/">Schedule a call</a></p>
+          <h2 class="xl" id="biz-contact-title">Tell me where your systems <span class="violet">let you down.</span></h2>
+          <p>A few sentences is enough. The first consultation is free.</p>
+          <p class="contact-direct">Or email <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></p>
         </div>
         <!-- include:form practice=business id=biz -->
-  <form class="lead-form" data-practice="business" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-labelledby="biz-title">
-            <h3 id="biz-title">Request a free consultation</h3>
+  <form class="lead-form" data-practice="business" action="https://formsubmit.co/ajax/marc.fertout@mvfdatasystems.com" method="post" novalidate aria-label="Consultation request">
             <div class="form-fields">
               <input type="hidden" name="_subject" value="Website inquiry: Business consulting">
               <input type="hidden" name="_template" value="table">
@@ -398,13 +255,12 @@
                 </div>
               </div>
               <div class="field" data-validate>
-                <label for="biz-message">What problem are you trying to solve?</label>
-                <textarea id="biz-message" name="message" required maxlength="4000" placeholder="For example: our inventory system and accounting reports don't agree, and month-end reporting takes two weeks."></textarea>
+                <label for="biz-message">What&rsquo;s the problem?</label>
+                <textarea id="biz-message" name="message" required maxlength="4000" rows="4" placeholder="e.g. Our inventory and accounting reports never agree."></textarea>
                 <span class="field-error" aria-live="polite"></span>
               </div>
-              
-              <button class="btn" type="submit">Send request</button>
-              <p class="form-note">The first conversation is free and without obligation. Your details are used only to respond to your request. See the <a href="/privacy/">privacy notice</a>.</p>
+              <button class="btn" type="submit">Send</button>
+              <p class="form-note">First consultation free. <a href="/privacy/">Privacy</a>.</p>
             </div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
@@ -412,46 +268,24 @@
       </div>
     </section>
   </main>
-
-  <div class="mobile-cta"><a class="btn" href="#contact">Book a Free Consultation</a></div>
+  <div class="mobile-cta"><a class="btn" href="#contact">Free Consultation</a></div>
   <!-- include:footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="big-mark" aria-hidden="true">MVF Data Systems<span class="dot">.</span></div>
-      <div class="footer-grid">
-        <div>
-          <p>Independent business systems and healthcare IT consulting, led by Marc Fertout. Based in Los Angeles, serving Los Angeles and Orange counties and remote clients.</p>
-        </div>
-        <div>
-          <h2>Business</h2>
-          <ul>
-            <li><a href="/business-consulting/">Business Systems Consulting</a></li>
-            <li><a href="/business-consulting/operations-diagnostic/">Business Systems Diagnostic</a></li>
-            <li><a href="/business-consulting/reporting-dashboards/">Reporting &amp; BI</a></li>
-            <li><a href="/business-consulting/data-integration/">Data Reconciliation &amp; Integration</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Healthcare</h2>
-          <ul>
-            <li><a href="/healthcare-consulting/">Healthcare IT Consulting</a></li>
-            <li><a href="/healthcare-consulting/interoperability/">Interoperability &amp; Data Integration</a></li>
-            <li><a href="/healthcare-consulting/workflow-optimization/">Clinical Workflow Optimization</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Company</h2>
-          <ul>
-            <li><a href="/about/">About Marc Fertout</a></li>
-            <li><a href="/case-studies/">Selected Projects</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></li>
-          </ul>
-        </div>
+      <div class="footer-row">
+        <ul class="footer-links">
+          <li><a href="/business-consulting/">Business</a></li>
+          <li><a href="/healthcare-consulting/">Healthcare</a></li>
+          <li><a href="/case-studies/">Track Record</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <a class="btn" href="/contact/">Free consultation</a>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 MVF Data Systems &middot; Los Angeles, California</span>
-        <a href="/privacy/">Privacy notice</a>
+      <div class="copyright">
+        <span>&copy; 2026 MVF Data Systems &middot; Los Angeles, California &middot; <a href="mailto:marc.fertout@mvfdatasystems.com">marc.fertout@mvfdatasystems.com</a></span>
+        <a href="/privacy/">Privacy</a>
       </div>
     </div>
   </footer>
