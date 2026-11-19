@@ -720,3 +720,19 @@ a.row-inner:hover .what { color: var(--violet); }
 @media (max-width: 760px) { .hero h1 { line-height: 1.1; } .hero { padding: 64px 0 60px; } }
 .pill { font-family: var(--sans); line-height: 1.6; }
 .product h3 .pill { vertical-align: middle; }
+
+/* Portrait beside contact forms */
+.contact-portrait { display: flex; align-items: center; gap: 20px; margin-top: 36px; }
+.contact-portrait .cp-frame { flex: none; border: 4px solid var(--violet); padding: 5px; line-height: 0; }
+.contact-portrait img {
+  width: 110px; height: 138px; object-fit: cover; object-position: 50% 15%;
+  filter: grayscale(1) contrast(1.05);
+}
+.contact-portrait strong {
+  display: block; font-family: var(--display); font-weight: 700; text-transform: uppercase;
+  font-size: 1.35rem; line-height: 1.1; color: var(--ink);
+}
+.contact-portrait span {
+  display: block; margin-top: 6px; font-size: 0.75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--violet);
+}
