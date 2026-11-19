@@ -725,7 +725,7 @@ a.row-inner:hover .what { color: var(--violet); }
 .contact-portrait { display: flex; align-items: center; gap: 20px; margin-top: 36px; }
 .contact-portrait .cp-frame { flex: none; border: 4px solid var(--violet); padding: 5px; line-height: 0; }
 .contact-portrait img {
-  width: 110px; height: 138px; object-fit: cover; object-position: 50% 15%;
+  width: 152px; height: 190px; object-fit: cover; object-position: 50% 15%;
   filter: grayscale(1) contrast(1.05);
 }
 .contact-portrait strong {
@@ -736,3 +736,8 @@ a.row-inner:hover .what { color: var(--violet); }
   display: block; margin-top: 6px; font-size: 0.75rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.12em; color: var(--violet);
 }
+.contact-portrait em {
+  display: block; margin-top: 8px; font-style: normal; font-size: 0.92rem; font-weight: 600; color: var(--ink-soft);
+}
+.contact-portrait strong { font-size: 1.5rem; }
+@media (max-width: 760px) { .contact-portrait img { width: 128px; height: 160px; } }
